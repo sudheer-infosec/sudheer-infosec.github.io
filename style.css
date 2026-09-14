@@ -4813,3 +4813,176 @@ body::after {
         line-height: 1.8;
     }
 }
+.cyber-title {
+    font-family: "Lucida Calligraphy", cursive;
+    font-weight: 700;
+    line-height: 1.2;
+
+    background: linear-gradient(
+        90deg,
+        #00ffff,
+        #0066ff,
+        #bf00ff,
+        #ff00aa,
+        #ff0055,
+        #00ffff
+    );
+
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: rgbCyber 5s linear infinite;
+}
+
+@keyframes rgbCyber {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* RGB CYBER TITLE */
+h1.cyber-title {
+    font-family: "Lucida Calligraphy", cursive !important;
+    font-weight: 700 !important;
+    background: linear-gradient(
+        90deg,
+        #00ffff,
+        #0066ff,
+        #bf00ff,
+        #ff00aa,
+        #ff0055,
+        #00ffff
+    ) !important;
+    background-size: 300% 100% !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    animation: rgbCyber 5s linear infinite !important;
+}
+
+@keyframes rgbCyber {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* RGB CYBERSECURITY TITLE */
+.cyber-title {
+  font-family: "Lucida Calligraphy", cursive !important;
+  letter-spacing: -2px !important;
+}
+
+.cyber-title span:nth-child(1) {
+  color: #00ffff !important;
+  text-shadow: 0 0 8px #00ffff, 0 0 20px #00ffff !important;
+}
+
+.cyber-title span:nth-child(2) {
+  color: #bf00ff !important;
+  text-shadow: 0 0 8px #bf00ff, 0 0 20px #bf00ff !important;
+}
+
+.cyber-title span:nth-child(3) {
+  color: #ff0055 !important;
+  text-shadow: 0 0 8px #ff0055, 0 0 20px #ff0055 !important;
+}
+/* =========================================================
+   FINAL HERO TITLE — RGB CYBERSECURITY
+   ========================================================= */
+
+.hero-copy h1.cyber-title,
+.hero-copy h1.cyber-title span {
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive !important;
+}
+
+/* CYBERSECURITY */
+.hero-copy h1.cyber-title span:nth-child(1) {
+    color: #00ffff !important;
+    -webkit-text-fill-color: #00ffff !important;
+    text-shadow:
+        0 0 8px #00ffff,
+        0 0 18px #00ffff,
+        0 0 35px rgba(0,255,255,0.7) !important;
+}
+
+/* INVESTIGATION */
+.hero-copy h1.cyber-title span:nth-child(2) {
+    color: #bf00ff !important;
+    -webkit-text-fill-color: #bf00ff !important;
+    text-shadow:
+        0 0 8px #bf00ff,
+        0 0 18px #bf00ff,
+        0 0 35px rgba(191,0,255,0.7) !important;
+}
+
+/* DEFENSE */
+.hero-copy h1.cyber-title span:nth-child(3) {
+    color: #ff0055 !important;
+    -webkit-text-fill-color: #ff0055 !important;
+    text-shadow:
+        0 0 8px #ff0055,
+        0 0 18px #ff0055,
+        0 0 35px rgba(255,0,85,0.7) !important;
+}
+
+/* TITLE SIZE */
+.hero-copy h1.cyber-title {
+    font-size: clamp(3rem, 6vw, 5.5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+}
+
+/* ===== FINAL RGB HERO TITLE FIX ===== */
+
+.hero-copy h1.cyber-title span:nth-child(1) {
+    color: #00FFFF !important;
+    -webkit-text-fill-color: #00FFFF !important;
+    text-shadow: 0 0 10px #00FFFF, 0 0 25px #00FFFF !important;
+}
+
+.hero-copy h1.cyber-title span:nth-child(2) {
+    color: #A855F7 !important;
+    -webkit-text-fill-color: #A855F7 !important;
+    text-shadow: 0 0 10px #A855F7, 0 0 25px #A855F7 !important;
+}
+
+.hero-copy h1.cyber-title span:nth-child(3) {
+    color: #FF007F !important;
+    -webkit-text-fill-color: #FF007F !important;
+    text-shadow: 0 0 10px #FF007F, 0 0 25px #FF007F !important;
+}
+/* ===== FINAL HERO RGB COLORS ===== */
+
+.hero-copy h1 em:nth-of-type(1) {
+    color: #00FFFF !important;
+    -webkit-text-fill-color: #00FFFF !important;
+    text-shadow: 0 0 10px #00FFFF, 0 0 25px #00FFFF !important;
+}
+
+.hero-copy h1 em:nth-of-type(2) {
+    color: #A855F7 !important;
+    -webkit-text-fill-color: #A855F7 !important;
+    text-shadow: 0 0 10px #A855F7, 0 0 25px #A855F7 !important;
+}
+
+.hero-copy h1 em:nth-of-type(3) {
+    color: #FF007F !important;
+    -webkit-text-fill-color: #FF007F !important;
+    text-shadow: 0 0 10px #FF007F, 0 0 25px #FF007F !important;
+}
