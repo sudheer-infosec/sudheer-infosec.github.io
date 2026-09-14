@@ -1,0 +1,16 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp files
+*.tmp
+*.log
+*.bak
+
+# Windows Zone Identifier files
+*:Zone.Identifier
+
+# Editor files
+.vscode/
+*.swp

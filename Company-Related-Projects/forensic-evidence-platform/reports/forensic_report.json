@@ -1,0 +1,17 @@
+{
+    "evidence_items": [
+        {
+            "file_name": "autopsy_report.txt",
+            "file_size_bytes": 99036,
+            "created_time": "2026-01-08T00:43:27.994833",
+            "modified_time": "2026-01-08T00:38:27.356383",
+            "sha256_hash": "3ed841fda27fd359d50de2c7a96d1b92e2dfde8cc2b1aa2a3ba54f3bc2fb10fd"
+        }
+    ],
+    "chain_of_custody": [
+        "2026-01-07T19:32:40.671173 | investigator | autopsy_report.txt | EVIDENCE VERIFIED\n",
+        "2026-01-07T19:34:28.980436 | investigator | autopsy_report.txt | EVIDENCE STORED\n",
+        "2026-01-07T19:34:29.001745 | investigator | autopsy_report.txt | EVIDENCE VERIFIED\n",
+        "2026-01-07T19:46:44.186303 | investigator | autopsy_report.txt | EVIDENCE VERIFIED\n"
+    ]
+}

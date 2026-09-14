@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Node.js
+node_modules/
+
+# Build files
+dist/
+build/
+target/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment/secrets
+.env
+*.pem
+*.key
+
+# Virtual machines / disk images
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.iso
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+Thumbs.db
+.DS_Store
+# Generated frontend/cache files
+.cache/
+*.map
+
