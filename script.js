@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "01ABCDEFGHIJKLMNOPQRSTUVWXYZ<>[]{}#$%";
 
         function resizeMatrix() {
-
             width = canvas.width = window.innerWidth;
             height = canvas.height = window.innerHeight;
 
@@ -64,11 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             characters.length
                         )
                     ];
-
-                /*
-                 * Alternate between cyan and green
-                 * for a SOC telemetry appearance.
-                 */
 
                 ctx.fillStyle =
                     i % 5 === 0
@@ -243,10 +237,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     "security-scan"
                 );
 
-                /*
-                 * Force browser to restart animation.
-                 */
-
                 void project.offsetWidth;
 
                 project.classList.add(
@@ -309,11 +299,6 @@ document.addEventListener("DOMContentLoaded", () => {
             ".section, .project, .resource-card"
         );
 
-    /*
-     * Only activate the reveal system if
-     * IntersectionObserver is available.
-     */
-
     if (
         "IntersectionObserver" in window
     ) {
@@ -367,11 +352,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     } else {
-
-        /*
-         * Fallback:
-         * keep everything visible.
-         */
 
         revealElements.forEach(
             element => {
