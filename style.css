@@ -1621,3 +1621,367 @@ footer{
     transition-duration:.01ms !important;
   }
 }
+/* =========================================================
+   FINAL ABOUT + HERO COLOR FIX
+   ========================================================= */
+
+/* ---------- ABOUT SECTION ---------- */
+
+#about .about-grid {
+    display: grid;
+    grid-template-columns: minmax(300px, 330px) minmax(0, 1fr);
+    gap: 55px;
+    align-items: start;
+    width: 100%;
+}
+
+#about .profile-card {
+    width: 100%;
+    max-width: 330px;
+}
+
+#about .about-text {
+    min-width: 0;
+    width: 100%;
+}
+
+#about .large {
+    max-width: none;
+    font-size: 24px;
+    line-height: 1.55;
+}
+
+#about .about-copy {
+    max-width: none;
+}
+
+#about .two-col {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+
+/* ---------- RED ACCENT ---------- */
+
+#about .about-text blockquote {
+    border-left-color: #ff3131 !important;
+    background: rgba(255, 49, 49, 0.035) !important;
+}
+
+#about .about-text blockquote strong {
+    color: #ff3131 !important;
+    text-shadow: none !important;
+}
+
+
+/* ---------- HERO: RED "INVESTIGATION" ---------- */
+
+.hero h1 span {
+    color: #ff3131 !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+.hero h1 em {
+    text-shadow: none !important;
+}
+
+
+/* ---------- REMOVE NEON FROM DEFENSE ---------- */
+
+.hero h1 {
+    text-shadow: none !important;
+}
+
+.hero h1,
+.hero h1 span,
+.hero h1 em {
+    filter: none !important;
+}
+
+
+/* ---------- DESKTOP SAFETY ---------- */
+
+@media (min-width: 1001px) {
+    #about .about-grid {
+        grid-template-columns: 330px minmax(0, 1fr) !important;
+        gap: 55px !important;
+    }
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1000px) and (min-width: 651px) {
+    #about .about-grid {
+        grid-template-columns: 280px minmax(0, 1fr) !important;
+        gap: 35px !important;
+    }
+
+    #about .two-col {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 650px) {
+    #about .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    #about .profile-card {
+        max-width: 100%;
+    }
+
+    #about .two-col {
+        grid-template-columns: 1fr !important;
+    }
+}
+/* =========================================================
+   CREATED WEBSITES
+   MATCH EXISTING WEBSITE TYPOGRAPHY
+   ========================================================= */
+
+.created-websites-wrap {
+    margin-top: 18px;
+}
+
+/* Button */
+
+.created-websites-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: var(--muted);
+
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+
+    cursor: pointer;
+
+    transition:
+        color .25s ease,
+        text-shadow .25s ease;
+}
+
+.created-websites-btn:hover {
+    color: var(--cyan);
+
+    text-shadow:
+        0 0 10px rgba(0,217,255,.35);
+}
+
+.created-websites-btn > span:first-child {
+    font-size: 10px;
+}
+
+.website-arrow {
+    display: inline-block;
+
+    color: var(--cyan);
+
+    font-family: var(--mono);
+    font-size: 12px;
+
+    transition:
+        transform .25s ease,
+        color .25s ease;
+}
+
+.created-websites-btn:hover .website-arrow {
+    color: var(--green);
+}
+
+
+/* Panel */
+
+.created-websites-panel {
+    display: none;
+
+    margin-top: 14px;
+
+    width: 100%;
+}
+
+.created-websites-panel.open {
+    display: block;
+}
+
+
+/* Individual Website */
+
+.created-website-card {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 38px minmax(0, 1fr) 30px;
+
+    align-items: start;
+
+    gap: 14px;
+
+    padding: 16px 18px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #17343c;
+    border-radius: 7px;
+
+    background: rgba(7,15,19,.8);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+}
+
+.created-website-card:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(0,217,255,.35);
+
+    background: rgba(7,20,25,.9);
+}
+
+
+/* 01 / 02 */
+
+.website-number {
+    padding-top: 2px;
+
+    color: #46616a;
+
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: .5px;
+}
+
+
+/* Project Information */
+
+.website-info {
+    min-width: 0;
+}
+
+.website-info h3 {
+    margin: 0;
+
+    color: #e1edef;
+
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    transition: color .25s ease;
+}
+
+.created-website-card:hover .website-info h3 {
+    color: #fff;
+}
+
+
+/* Description */
+
+.website-info p {
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* URL */
+
+.website-link {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #71878e;
+
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 500;
+
+    word-break: break-all;
+
+    transition: color .25s ease;
+}
+
+.created-website-card:hover .website-link {
+    color: var(--cyan);
+}
+
+
+/* External Link */
+
+.website-open {
+    justify-self: end;
+
+    color: var(--green);
+
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+.created-website-card:hover .website-open {
+    color: #fff;
+
+    transform: translate(2px,-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .created-website-card {
+        grid-template-columns: 30px minmax(0,1fr) 24px;
+
+        gap: 10px;
+
+        padding: 14px;
+    }
+
+    .website-info h3 {
+        font-size: 16px;
+    }
+
+    .website-info p {
+        font-size: 11px;
+    }
+
+    .website-link {
+        font-size: 8px;
+    }
+}
+
+

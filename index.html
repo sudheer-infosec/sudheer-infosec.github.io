@@ -1,261 +1,4334 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<link rel="stylesheet" href="style.css">
-<meta name="google-site-verification" content="BaLYkk7tqYpVHNf3xM1q7a2a3ZLacHmGXL2InMd1gMM" />
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Singuru Sudheer's cybersecurity portfolio — SOC, threat detection, digital forensics, ethical hacking, network security and security automation. Explore practical labs, projects and curated cybersecurity resources.">
-<meta name="author" content="Singuru Sudheer">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#05080a">
-<link rel="canonical" href="https://sudheer-infosec.github.io/">
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://sudheer-infosec.github.io/">
-<meta property="og:title" content="Singuru Sudheer | Cybersecurity Portfolio">
-<meta property="og:description" content="Cybersecurity portfolio focused on SOC, threat detection, digital forensics, ethical hacking, network security, security automation and practical learning.">
-<meta property="og:image" content="https://sudheer-infosec.github.io/profile.jpg">
-<meta property="og:image:alt" content="Singuru Sudheer — Cybersecurity Portfolio">
-<meta property="og:site_name" content="Singuru Sudheer Cybersecurity Portfolio">
+<meta name="description"
+      content="Singuru Sudheer Cybersecurity Portfolio">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Singuru Sudheer | Cybersecurity Portfolio">
-<meta name="twitter:description" content="Cybersecurity portfolio focused on SOC, threat detection, digital forensics, ethical hacking and security automation.">
-<meta name="twitter:image" content="https://sudheer-infosec.github.io/profile.jpg">
+<meta name="theme-color" content="#03050c">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Singuru Sudheer",
-    "alternateName": "sudheer-infosec",
-    "description": "Cybersecurity-focused technologist building practical experience in SOC operations, threat detection, ethical hacking, digital forensics, network security, security automation and cybersecurity education.",
-    "image": "https://sudheer-infosec.github.io/profile.jpg",
-    "sameAs": [
-      "https://github.com/sudheer-infosec",
-      "https://www.linkedin.com/in/singuru-sudheer-b4916b345"
-    ]
-  }
-}
-</script>
+<title>Singuru Sudheer | Cybersecurity Portfolio</title>
 
-<title>Singuru Sudheer | Cybersecurity Portfolio | SOC & DFIR</title>
+<!-- GOOGLE SITE VERIFICATION -->
+<meta name="google-site-verification"
+      content="BaLYkk7tqYpVHNf3xM1q7a2a3ZLacHmGXL2InMd1gMM">
+
+<!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+
+    --bg:#03050c;
+    --bg2:#070b16;
+
+    --white:#f5f7ff;
+    --muted:#9ca8bd;
+
+    --cyan:#00eaff;
+    --blue:#4776ff;
+    --purple:#9d4edd;
+    --violet:#7c5cff;
+    --pink:#ff2bd6;
+    --red:#ff3366;
+    --orange:#ff9f1c;
+
+    --card:rgba(11,16,30,.68);
+
+    --border:rgba(255,255,255,.10);
+
+    --glass:
+        linear-gradient(
+            145deg,
+            rgba(18,25,45,.82),
+            rgba(5,8,18,.72)
+        );
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(71,118,255,.14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(255,43,214,.11),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 50% 80%,
+            rgba(0,234,255,.08),
+            transparent 35%
+        ),
+
+        #03050c;
+
+    color:var(--white);
+
+    font-family:"Inter",sans-serif;
+
+    overflow-x:hidden;
+}
+
+body::selection{
+    background:rgba(92,93,255,.4);
+    color:#fff;
+}
+
+a{
+    color:inherit;
+}
+
+
+/* =========================================================
+   CINEMATIC GRID
+========================================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.018) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.018) 1px,
+            transparent 1px
+        );
+
+    background-size:45px 45px;
+
+    pointer-events:none;
+
+    z-index:-10;
+}
+
+
+/* =========================================================
+   SCANLINES
+========================================================= */
+
+.scanlines{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:9998;
+
+    opacity:.08;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 3px,
+            rgba(255,255,255,.035) 4px
+        );
+
+    animation:scanMove 8s linear infinite;
+}
+
+@keyframes scanMove{
+
+    from{
+        background-position:0 0;
+    }
+
+    to{
+        background-position:0 120px;
+    }
+}
+
+
+/* =========================================================
+   RGB ORBS
+========================================================= */
+
+.rgb-orb{
+
+    position:fixed;
+
+    width:430px;
+    height:430px;
+
+    border-radius:50%;
+
+    filter:blur(110px);
+
+    opacity:.16;
+
+    pointer-events:none;
+
+    z-index:-5;
+}
+
+.orb-one{
+
+    background:#315cff;
+
+    left:-150px;
+    top:100px;
+
+    animation:
+        orbMove1
+        12s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+.orb-two{
+
+    background:#ff00c8;
+
+    right:-150px;
+    top:380px;
+
+    animation:
+        orbMove2
+        15s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+.orb-three{
+
+    background:#00eaff;
+
+    left:40%;
+    bottom:-250px;
+
+    animation:
+        orbMove3
+        14s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+@keyframes orbMove1{
+
+    to{
+        transform:translate(130px,100px);
+    }
+}
+
+@keyframes orbMove2{
+
+    to{
+        transform:translate(-120px,-70px);
+    }
+}
+
+@keyframes orbMove3{
+
+    to{
+        transform:translate(80px,-120px);
+    }
+}
+
+
+/* =========================================================
+   MATRIX CANVAS
+========================================================= */
+
+#matrix{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    opacity:.11;
+
+    pointer-events:none;
+
+    z-index:-6;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+header.nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    min-height:74px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+    padding:16px 5%;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(3,5,12,.88),
+            rgba(3,5,12,.64)
+        );
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.07);
+
+    z-index:9999;
+}
+
+
+/* BRAND */
+
+.brand{
+
+    flex-shrink:0;
+
+    text-decoration:none;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00eaff,
+            #4776ff,
+            #c44cff,
+            #ff2bd6
+        );
+
+    background-size:200% auto;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:
+        brandGradient
+        6s
+        linear
+        infinite;
+}
+
+@keyframes brandGradient{
+
+    to{
+        background-position:200% center;
+    }
+}
+
+.prompt{
+
+    -webkit-text-fill-color:#00eaff;
+
+    margin-right:5px;
+}
+
+.dot{
+
+    -webkit-text-fill-color:#ff2bd6;
+}
+
+
+/* INNER NAV */
+
+header.nav nav{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:24px;
+
+    margin-left:auto;
+}
+
+header.nav nav a{
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:#b9c3d8;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:1.2px;
+
+    padding:8px 0;
+
+    transition:.3s ease;
+}
+
+header.nav nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:0;
+    height:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--cyan),
+            var(--pink)
+        );
+
+    box-shadow:
+        0 0 10px var(--cyan);
+
+    transition:.3s ease;
+}
+
+header.nav nav a:hover{
+
+    color:#fff;
+
+    text-shadow:
+        0 0 8px var(--cyan),
+        0 0 16px var(--blue);
+}
+
+header.nav nav a:hover::after{
+
+    width:100%;
+}
+
+
+/* GITHUB BUTTON */
+
+.nav-github{
+
+    flex-shrink:0;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:9px 15px;
+
+    text-decoration:none;
+
+    border-radius:9px;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(57,108,255,.22),
+            rgba(157,78,221,.22)
+        );
+
+    border:
+        1px solid
+        rgba(99,126,255,.35);
+
+    box-shadow:
+        0 0 20px rgba(71,118,255,.10);
+
+    transition:.3s ease;
+}
+
+.nav-github:hover{
+
+    transform:translateY(-2px);
+
+    border-color:rgba(0,234,255,.55);
+
+    box-shadow:
+        0 0 25px rgba(71,118,255,.25),
+        0 0 35px rgba(255,43,214,.10);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.25fr)
+        minmax(300px,.75fr);
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:
+        145px
+        7%
+        90px;
+
+    overflow:hidden;
+}
+
+.hero-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 20%,
+            rgba(3,5,12,.35) 75%,
+            #03050c 100%
+        );
+
+    pointer-events:none;
+}
+
+
+/* FLOATING HUD CARDS */
+
+.float-card{
+
+    position:absolute;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.015)
+        );
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+.float-card span{
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    color:#aebafc;
+
+    text-shadow:
+        0 0 12px rgba(92,95,255,.5);
+}
+
+.float-card.one{
+
+    width:170px;
+    height:100px;
+
+    left:2%;
+    top:27%;
+
+    transform:rotate(-8deg);
+
+    animation:
+        floatOne
+        6s
+        ease-in-out
+        infinite;
+}
+
+.float-card.two{
+
+    width:125px;
+    height:165px;
+
+    right:4%;
+    top:30%;
+
+    transform:rotate(8deg);
+
+    animation:
+        floatTwo
+        8s
+        ease-in-out
+        infinite;
+}
+
+.float-card.three{
+
+    width:200px;
+    height:75px;
+
+    right:18%;
+    bottom:9%;
+
+    transform:rotate(-3deg);
+
+    animation:
+        floatThree
+        7s
+        ease-in-out
+        infinite;
+}
+
+@keyframes floatOne{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(-8deg);
+    }
+
+    50%{
+        transform:
+            translateY(-24px)
+            rotate(-4deg);
+    }
+}
+
+@keyframes floatTwo{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(8deg);
+    }
+
+    50%{
+        transform:
+            translateY(27px)
+            rotate(4deg);
+    }
+}
+
+@keyframes floatThree{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
+
+    50%{
+        transform:
+            translateY(-19px)
+            rotate(2deg);
+    }
+}
+
+
+/* HERO CONTENT */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:3;
+
+    max-width:900px;
+}
+
+.hero-eyebrow{
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    color:#8190ad;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:
+        clamp(
+            54px,
+            7vw,
+            102px
+        );
+
+    font-weight:600;
+
+    line-height:.95;
+
+    letter-spacing:-2px;
+
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff2bd6,
+            #ff557d,
+            #ff9f1c
+        );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(255,43,214,.22)
+        );
+}
+
+
+/* HERO SUBTITLE */
+
+.hero-subtitle{
+
+    font-family:"Rajdhani",sans-serif;
+
+    color:#dce3f5;
+
+    font-size:21px;
+
+    line-height:1.45;
+
+    max-width:700px;
+
+    margin-bottom:12px;
+}
+
+.hero-role{
+
+    color:#71809d;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    margin-bottom:22px;
+}
+
+.hero-description{
+
+    max-width:720px;
+
+    color:#9faac0;
+
+    font-size:16px;
+
+    line-height:1.8;
+}
+
+.hero-description strong{
+
+    color:#e7ecff;
+}
+
+
+/* HERO ACTIONS */
+
+.hero-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:32px;
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:48px;
+
+    padding:13px 22px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:80%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.25),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    transition:.6s;
+}
+
+.btn:hover::before{
+
+    left:140%;
+}
+
+.btn.primary{
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #396cff,
+            #9b42ff,
+            #ff2bc2
+        );
+
+    box-shadow:
+        0 10px 35px
+        rgba(72,91,255,.25);
+}
+
+.btn.ghost{
+
+    color:#e9edff;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    backdrop-filter:blur(15px);
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(69,93,255,.25),
+        0 0 25px
+        rgba(255,43,214,.12);
+}
+
+
+/* TYPING BADGE */
+
+.badges{
+
+    margin-top:25px;
+
+    min-height:34px;
+
+    opacity:.9;
+}
+
+.badges img{
+
+    max-width:100%;
+
+    height:auto;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(126,92,255,.35)
+        );
+}
+
+
+/* TERMINAL */
+
+.terminal{
+
+    margin-top:25px;
+
+    width:min(100%,700px);
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    background:
+        rgba(3,7,15,.78);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.3),
+        0 0 30px
+        rgba(71,118,255,.06);
+}
+
+.terminal-bar{
+
+    height:38px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:0 14px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.06);
+}
+
+.terminal-bar i{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#556077;
+}
+
+.terminal-bar span{
+
+    margin-left:8px;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+    color:#76839c;
+}
+
+.terminal-body{
+
+    padding:20px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:14px;
+
+    color:#cfd7e8;
+
+    min-height:58px;
+}
+
+.green{
+
+    color:#8c7cff;
+
+    text-shadow:
+        0 0 10px
+        rgba(140,124,255,.45);
+}
+
+.cursor{
+
+    color:#00eaff;
+
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:0;
+    }
+}
+
+
+/* HERO HUD */
+
+.hero-hud{
+
+    position:relative;
+
+    z-index:3;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:22px;
+}
+
+.photo-frame{
+
+    position:relative;
+
+    width:min(360px,75vw);
+
+    aspect-ratio:1/1;
+
+    padding:8px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00eaff,
+            #4776ff,
+            #9d4edd,
+            #ff2bd6
+        );
+
+    box-shadow:
+        0 0 45px
+        rgba(71,118,255,.18),
+        0 0 80px
+        rgba(255,43,214,.08);
+
+    animation:
+        photoFloat
+        6s
+        ease-in-out
+        infinite;
+}
+
+.photo-frame::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-15px;
+
+    border:
+        1px solid
+        rgba(71,118,255,.20);
+
+    border-radius:35px;
+
+    animation:
+        framePulse
+        4s
+        ease-in-out
+        infinite;
+}
+
+.photo-frame img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:23px;
+
+    display:block;
+
+    background:#080c18;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.photo-glow{
+
+    position:absolute;
+
+    inset:20%;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,234,255,.22),
+            transparent 70%
+        );
+
+    filter:blur(25px);
+
+    z-index:1;
+}
+
+@keyframes photoFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@keyframes framePulse{
+
+    0%,100%{
+        transform:scale(1);
+        opacity:.5;
+    }
+
+    50%{
+        transform:scale(1.04);
+        opacity:1;
+    }
+}
+
+
+/* HUD CARD */
+
+.hud-card{
+
+    width:min(360px,85vw);
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:
+        rgba(9,14,27,.72);
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.3);
+}
+
+.hud-card span{
+
+    display:block;
+
+    color:#73819b;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
+}
+
+.hud-card strong{
+
+    display:block;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:22px;
+
+    letter-spacing:1px;
+
+    color:#fff;
+
+    margin-bottom:14px;
+}
+
+.meter{
+
+    height:5px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    margin-bottom:10px;
+}
+
+.meter b{
+
+    display:block;
+
+    width:78%;
+
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00eaff,
+            #4776ff,
+            #ff2bd6
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(0,234,255,.5);
+
+    animation:
+        meterPulse
+        3s
+        ease-in-out
+        infinite alternate;
+}
+
+@keyframes meterPulse{
+
+    to{
+        width:92%;
+    }
+}
+
+.hud-card small{
+
+    color:#69758c;
+
+    font-size:11px;
+}
+
+
+/* =========================================================
+   METRICS
+========================================================= */
+
+.metrics{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin:
+        0 7%
+        60px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    background:
+        rgba(9,14,27,.56);
+
+    backdrop-filter:blur(18px);
+
+    overflow:hidden;
+}
+
+.metrics > div{
+
+    padding:28px 20px;
+
+    text-align:center;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,.07);
+
+    transition:.35s;
+}
+
+.metrics > div:last-child{
+    border-right:0;
+}
+
+.metrics > div:hover{
+
+    background:
+        rgba(71,118,255,.06);
+}
+
+.metrics strong{
+
+    display:block;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00eaff,
+            #c44cff,
+            #ff2bd6
+        );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:6px;
+}
+
+.metrics span{
+
+    color:#77849b;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section.section{
+
+    position:relative;
+
+    padding:
+        110px
+        7%;
+}
+
+.section-head{
+
+    margin-bottom:35px;
+
+    position:relative;
+}
+
+.section-head > span{
+
+    display:block;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    color:#7785a0;
+
+    margin-bottom:13px;
+}
+
+.section-head h2{
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            62px
+        );
+
+    line-height:1;
+
+    font-weight:600;
+
+    color:#fff;
+}
+
+.section-head h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    margin-top:18px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00eaff,
+            #4776ff,
+            #ff2bd6
+        );
+
+    box-shadow:
+        0 0 14px
+        rgba(0,234,255,.35);
+}
+
+.section-head > a{
+
+    position:absolute;
+
+    right:0;
+    bottom:3px;
+
+    text-decoration:none;
+
+    color:#9ba9c3;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.section-head > a:hover{
+    color:#00eaff;
+}
+
+.section-intro{
+
+    max-width:780px;
+
+    color:#8f9bb1;
+
+    line-height:1.8;
+
+    margin:
+        -12px
+        0
+        35px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        320px
+        minmax(0,1fr);
+
+    gap:55px;
+
+    align-items:start;
+}
+
+.profile-card{
+
+    position:sticky;
+
+    top:100px;
+
+    padding:25px;
+
+    border-radius:22px;
+
+    background:var(--glass);
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.3);
+
+    text-align:center;
+
+    transition:.4s;
+}
+
+.profile-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:
+        rgba(71,118,255,.35);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.4),
+        0 0 35px
+        rgba(71,118,255,.08);
+}
+
+.profile-image-wrap{
+
+    width:180px;
+    height:180px;
+
+    margin:0 auto 20px;
+
+    padding:5px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00eaff,
+            #4776ff,
+            #c44cff,
+            #ff2bd6
+        );
+
+    box-shadow:
+        0 0 35px
+        rgba(71,118,255,.18);
+}
+
+.profile-image{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    display:block;
+}
+
+.profile-card h3{
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:27px;
+
+    margin-bottom:5px;
+}
+
+.profile-role{
+
+    color:#8e9ab1;
+
+    font-size:13px;
+
+    margin-bottom:18px;
+}
+
+.profile-chips{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:7px;
+
+    margin-bottom:20px;
+}
+
+.profile-chips span{
+
+    padding:6px 10px;
+
+    border-radius:20px;
+
+    color:#aeb9d0;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+.profile-link{
+
+    display:inline-block;
+
+    width:100%;
+
+    padding:11px;
+
+    border-radius:9px;
+
+    text-decoration:none;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    background:
+        rgba(71,118,255,.08);
+
+    border:
+        1px solid
+        rgba(71,118,255,.25);
+
+    color:#b8c7ef;
+
+    transition:.3s;
+}
+
+.profile-link:hover{
+
+    color:#fff;
+
+    border-color:#4776ff;
+
+    box-shadow:
+        0 0 25px
+        rgba(71,118,255,.16);
+}
+
+
+/* ABOUT TEXT */
+
+.about-text{
+
+    color:#9da8bd;
+
+    line-height:1.85;
+
+    font-size:15px;
+}
+
+.about-text p{
+    margin-bottom:20px;
+}
+
+.about-text strong{
+    color:#e5eaff;
+}
+
+.about-intro{
+
+    font-size:18px;
+
+    color:#c7d0e2;
+}
+
+.about-text blockquote{
+
+    margin:
+        30px
+        0;
+
+    padding:
+        22px
+        25px;
+
+    border-left:
+        3px solid
+        #7c5cff;
+
+    border-radius:
+        0 15px 15px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(124,92,255,.08),
+            transparent
+        );
+
+    color:#c1c9dc;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:18px;
+
+    font-style:italic;
+}
+
+.about-columns{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:35px;
+
+    margin-top:35px;
+}
+
+.about-columns h3{
+
+    color:#fff;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+}
+
+.about-columns ul{
+
+    list-style:none;
+}
+
+.about-columns li{
+
+    position:relative;
+
+    padding:
+        7px
+        0
+        7px
+        22px;
+
+    color:#919db3;
+}
+
+.about-columns li::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:16px;
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00eaff,
+            #ff2bd6
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(0,234,255,.35);
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.dark-section{
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(8,13,26,.35),
+            transparent
+        );
+}
+
+.skill-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+}
+
+.skill{
+
+    position:relative;
+
+    padding:25px;
+
+    min-height:165px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17,23,42,.78),
+            rgba(5,8,18,.76)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+    animation:
+        gentleFloat
+        6s
+        ease-in-out
+        infinite;
+}
+
+.skill:nth-child(2){
+    animation-delay:-1s;
+}
+
+.skill:nth-child(3){
+    animation-delay:-2s;
+}
+
+.skill:nth-child(4){
+    animation-delay:-3s;
+}
+
+.skill:nth-child(5){
+    animation-delay:-4s;
+}
+
+.skill:nth-child(6){
+    animation-delay:-5s;
+}
+
+.skill::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    right:-55px;
+    top:-55px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(71,118,255,.15),
+            transparent 70%
+        );
+}
+
+.skill:hover{
+
+    animation-play-state:paused;
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(71,118,255,.32);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.35),
+        0 0 30px
+        rgba(71,118,255,.08);
+}
+
+.skill b{
+
+    display:block;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:21px;
+
+    color:#eef2ff;
+
+    margin-bottom:12px;
+}
+
+.skill p{
+
+    color:#8490a7;
+
+    line-height:1.65;
+
+    font-size:13px;
+}
+
+@keyframes gentleFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+}
+
+
+/* TOOL CLOUD */
+
+.tool-cloud{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:35px;
+}
+
+.tool-cloud span{
+
+    padding:9px 13px;
+
+    border-radius:8px;
+
+    color:#909db6;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:9px;
+
+    letter-spacing:1.5px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    transition:.3s;
+}
+
+.tool-cloud span:hover{
+
+    color:#fff;
+
+    border-color:
+        rgba(0,234,255,.4);
+
+    box-shadow:
+        0 0 20px
+        rgba(0,234,255,.08);
+
+    transform:translateY(-3px);
+}
+
+
+/* LANGUAGES */
+
+.skills-languages{
+
+    margin-top:45px;
+}
+
+.skills-languages h3{
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+}
+
+.language-pills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.language-pills span{
+
+    padding:9px 16px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(71,118,255,.10),
+            rgba(255,43,214,.06)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    color:#aeb9cf;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.language-pills span:hover{
+
+    transform:translateY(-3px);
+
+    color:#fff;
+
+    border-color:
+        rgba(157,78,221,.4);
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+
+    perspective:1200px;
+}
+
+.project{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:330px;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16,22,40,.82),
+            rgba(5,8,18,.85)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 20px 55px
+        rgba(0,0,0,.28);
+
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+    transform-style:preserve-3d;
+
+    animation:
+        projectFloat
+        7s
+        ease-in-out
+        infinite;
+}
+
+.project:nth-child(2n){
+    animation-delay:-2s;
+}
+
+.project:nth-child(3n){
+    animation-delay:-4s;
+}
+
+.project::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #00eaff,
+            #4776ff,
+            #ff2bd6,
+            transparent
+        );
+
+    opacity:.5;
+}
+
+.project::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    right:-100px;
+    bottom:-100px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124,92,255,.13),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+@keyframes projectFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+.project:hover{
+
+    animation-play-state:paused;
+
+    border-color:
+        rgba(98,119,255,.40);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.45),
+
+        0 0 32px
+        rgba(41,168,255,.10),
+
+        0 0 45px
+        rgba(255,41,201,.07);
+}
+
+.project.featured{
+
+    border-color:
+        rgba(71,118,255,.22);
+}
+
+.project-no{
+
+    position:absolute;
+
+    top:18px;
+    right:20px;
+
+    color:#4e5a73;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+}
+
+.project-icon{
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    margin-bottom:20px;
+
+    color:#b6c5ff;
+
+    font-size:21px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,234,255,.08),
+            rgba(157,78,221,.12)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(71,118,255,.05);
+}
+
+.project h3{
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:24px;
+
+    color:#eef2ff;
+
+    margin-bottom:10px;
+}
+
+.project p{
+
+    color:#8793aa;
+
+    font-size:13px;
+
+    line-height:1.7;
+
+    min-height:88px;
+}
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:6px;
+
+    margin:
+        18px
+        0
+        20px;
+}
+
+.tags span{
+
+    padding:5px 8px;
+
+    border-radius:5px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid
+        rgba(255,255,255,.06);
+
+    color:#8290ab;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:7px;
+
+    letter-spacing:.8px;
+}
+
+.project > a{
+
+    display:inline-flex;
+
+    text-decoration:none;
+
+    color:#aebdff;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.project > a:hover{
+
+    color:#00eaff;
+
+    text-shadow:
+        0 0 10px
+        rgba(0,234,255,.4);
+}
+
+
+/* =========================================================
+   RESOURCE HUB
+========================================================= */
+
+.resources-section{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(7,11,22,.15),
+            rgba(4,7,15,.5)
+        );
+}
+
+.resource-note{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    padding:22px;
+
+    margin-bottom:30px;
+
+    border-radius:17px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(71,118,255,.08),
+            rgba(157,78,221,.05)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+}
+
+.resource-note-icon{
+
+    flex-shrink:0;
+
+    width:44px;
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:
+        rgba(71,118,255,.10);
+
+    color:#9caeff;
+
+    font-size:20px;
+}
+
+.resource-note strong{
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    color:#cbd4ed;
+}
+
+.resource-note p{
+
+    color:#8290a7;
+
+    font-size:13px;
+
+    line-height:1.7;
+
+    margin-top:7px;
+}
+
+
+/* TABS */
+
+.resource-tabs{
+
+    display:flex;
+
+    gap:8px;
+
+    margin-bottom:35px;
+
+    padding:5px;
+
+    width:max-content;
+
+    max-width:100%;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+}
+
+.resource-tab{
+
+    border:0;
+
+    background:transparent;
+
+    color:#7d89a2;
+
+    padding:11px 17px;
+
+    border-radius:8px;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.resource-tab:hover{
+
+    color:#fff;
+}
+
+.resource-tab.active{
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(71,118,255,.22),
+            rgba(157,78,221,.18)
+        );
+
+    box-shadow:
+        0 0 20px
+        rgba(71,118,255,.08);
+}
+
+
+/* PANELS */
+
+.resource-panel{
+    display:none;
+}
+
+.resource-panel.active{
+    display:block;
+
+    animation:
+        panelFade
+        .45s
+        ease;
+}
+
+@keyframes panelFade{
+
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* CATEGORY */
+
+.resource-category-head{
+
+    display:flex;
+
+    align-items:end;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-bottom:22px;
+}
+
+.resource-category-head span{
+
+    font-family:"Orbitron",sans-serif;
+
+    color:#66738d;
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+.resource-category-head h3{
+
+    font-family:"Rajdhani",sans-serif;
+
+    color:#dce3f3;
+
+    font-size:25px;
+
+    margin-top:6px;
+}
+
+.resource-counter{
+
+    color:#66738d;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+}
+
+
+/* RESOURCE GRID */
+
+.resource-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:17px;
+}
+
+.resource-card{
+
+    position:relative;
+
+    min-height:310px;
+
+    padding:23px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16,22,40,.82),
+            rgba(5,8,18,.86)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    backdrop-filter:blur(18px);
+
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+    transform-style:preserve-3d;
+
+    animation:
+        resourceFloating
+        7s
+        ease-in-out
+        infinite;
+}
+
+.resource-card:nth-child(2n){
+    animation-delay:-2s;
+}
+
+.resource-card:nth-child(3n){
+    animation-delay:-4s;
+}
+
+@keyframes resourceFloating{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+}
+
+.resource-card:hover{
+
+    animation-play-state:paused;
+
+    border-color:
+        rgba(219,66,255,.32);
+
+    box-shadow:
+        0 30px 75px
+        rgba(0,0,0,.40),
+
+        0 0 35px
+        rgba(77,96,255,.10);
+}
+
+.resource-number{
+
+    position:absolute;
+
+    right:17px;
+    top:15px;
+
+    color:#4c5870;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+}
+
+.resource-icon{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:11px;
+
+    margin-bottom:17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,234,255,.06),
+            rgba(157,78,221,.10)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    color:#a7b7f8;
+
+    font-size:17px;
+}
+
+.resource-type{
+
+    display:block;
+
+    color:#697792;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:7px;
+
+    line-height:1.4;
+
+    letter-spacing:1.2px;
+
+    margin-bottom:7px;
+}
+
+.resource-card h4{
+
+    font-family:"Rajdhani",sans-serif;
+
+    color:#e8edfc;
+
+    font-size:20px;
+
+    line-height:1.15;
+
+    margin-bottom:10px;
+}
+
+.resource-card p{
+
+    color:#7f8ba3;
+
+    font-size:12px;
+
+    line-height:1.65;
+
+    min-height:62px;
+}
+
+.resource-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:5px;
+
+    margin:
+        15px
+        0
+        17px;
+}
+
+.resource-tags span{
+
+    padding:4px 7px;
+
+    border-radius:5px;
+
+    color:#78859d;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid
+        rgba(255,255,255,.055);
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:6px;
+
+    letter-spacing:.8px;
+}
+
+.resource-card > a{
+
+    text-decoration:none;
+
+    color:#9aaeff;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.resource-card > a:hover{
+
+    color:#00eaff;
+
+    text-shadow:
+        0 0 10px
+        rgba(0,234,255,.4);
+}
+
+.resource-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-top:40px;
+
+    padding-top:20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.06);
+
+    color:#59667d;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   METHOD
+========================================================= */
+
+.investigation{
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(71,118,255,.05),
+            transparent 45%
+        );
+}
+
+.philosophy{
+
+    padding:45px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15,21,39,.76),
+            rgba(5,8,17,.72)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 80px
+        rgba(0,0,0,.25);
+}
+
+.philosophy > p{
+
+    max-width:850px;
+
+    margin:0 auto 50px;
+
+    text-align:center;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:
+        clamp(
+            22px,
+            3vw,
+            34px
+        );
+
+    line-height:1.3;
+
+    color:#aab5ca;
+}
+
+.philosophy > p strong{
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00eaff,
+            #9d4edd,
+            #ff2bd6
+        );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.flow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:13px;
+}
+
+.flow > div{
+
+    flex:1;
+
+    min-width:120px;
+
+    text-align:center;
+}
+
+.flow span{
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    width:42px;
+    height:42px;
+
+    margin:0 auto 12px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,234,255,.12),
+            rgba(157,78,221,.14)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    color:#9caeff;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:9px;
+}
+
+.flow b{
+
+    display:block;
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:10px;
+
+    letter-spacing:1.5px;
+
+    color:#dbe2f5;
+
+    margin-bottom:6px;
+}
+
+.flow small{
+
+    color:#69768d;
+
+    font-size:10px;
+
+    line-height:1.5;
+}
+
+.flow > i{
+
+    color:#56627a;
+
+    font-style:normal;
+
+    font-size:20px;
+}
+
+
+/* =========================================================
+   ROADMAP
+========================================================= */
+
+.focus-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:14px;
+}
+
+.focus-grid span{
+
+    padding:18px;
+
+    border-radius:14px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    color:#9aa7be;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.focus-grid span:hover{
+
+    transform:
+        translateY(-5px);
+
+    color:#fff;
+
+    border-color:
+        rgba(71,118,255,.30);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.25);
+}
+
+
+/* =========================================================
+   GITHUB STATS
+========================================================= */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:20px;
+}
+
+.stat-card{
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:
+        rgba(10,15,28,.65);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:
+        rgba(71,118,255,.25);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.3);
+}
+
+.stat-card.full{
+
+    grid-column:
+        1 / -1;
+}
+
+.stat-card img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    max-width:100%;
+}
+
+.snake{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:
+        rgba(10,15,28,.65);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    overflow:hidden;
+}
+
+.snake h3{
+
+    font-family:"Rajdhani",sans-serif;
+
+    margin-bottom:15px;
+
+    color:#cbd4e7;
+}
+
+.snake img{
+
+    width:100%;
+
+    max-width:100%;
+
+    display:block;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section{
+
+    text-align:center;
+}
+
+.contact-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+}
+
+.contact-icon{
+
+    width:150px;
+
+    min-height:110px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16,22,40,.80),
+            rgba(5,8,18,.78)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    transition:.35s;
+
+    backdrop-filter:blur(15px);
+}
+
+.contact-icon:hover{
+
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    border-color:
+        rgba(71,118,255,.35);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.35),
+        0 0 30px
+        rgba(71,118,255,.08);
+}
+
+.contact-symbol{
+
+    font-size:26px;
+
+    color:#aebcff;
+
+    text-shadow:
+        0 0 15px
+        rgba(71,118,255,.4);
+}
+
+.contact-label{
+
+    font-family:"Orbitron",sans-serif;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    color:#7e8aa2;
+}
+
+
+/* =========================================================
+   RGB DIVIDER
+========================================================= */
+
+.rgb-line{
+
+    height:1px;
+
+    width:85%;
+
+    margin:auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #00eaff,
+            #4e6cff,
+            #ae3fff,
+            #ff2bbd,
+            transparent
+        );
+
+    opacity:.6;
+
+    box-shadow:
+        0 0 15px
+        rgba(71,118,255,.2);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    padding:
+        30px
+        7%;
+
+    color:#59657b;
+
+    font-family:"Rajdhani",sans-serif;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.06);
+
+    background:
+        rgba(2,4,9,.55);
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(45px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1200
+========================================================= */
+
+@media(max-width:1200px){
+
+    header.nav{
+
+        padding-left:4%;
+        padding-right:4%;
+
+        gap:15px;
+    }
+
+    header.nav nav{
+
+        gap:16px;
+    }
+
+    .resource-grid{
+
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+
+    .projects{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 950
+========================================================= */
+
+@media(max-width:950px){
+
+    header.nav{
+
+        padding:
+            14px
+            5%;
+
+    }
+
+    header.nav nav{
+
+        display:none;
+    }
+
+    .nav-github{
+
+        margin-left:auto;
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        padding-top:130px;
+    }
+
+    .hero-content{
+
+        margin:auto;
+    }
+
+    .hero-description,
+    .hero-subtitle{
+
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-actions{
+
+        justify-content:center;
+    }
+
+    .hero-hud{
+
+        margin-top:20px;
+    }
+
+    .float-card.one{
+
+        left:1%;
+    }
+
+    .float-card.two{
+
+        right:1%;
+    }
+
+    .about-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .profile-card{
+
+        position:relative;
+
+        top:auto;
+
+        max-width:420px;
+
+        margin:auto;
+    }
+
+    .skill-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .resource-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .focus-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 650
+========================================================= */
+
+@media(max-width:650px){
+
+    section.section{
+
+        padding:
+            80px
+            6%;
+    }
+
+    .brand{
+
+        font-size:14px;
+
+        letter-spacing:1px;
+    }
+
+    .nav-github{
+
+        font-size:11px;
+
+        padding:
+            8px
+            11px;
+    }
+
+    .hero{
+
+        padding:
+            120px
+            6%
+            70px;
+    }
+
+    .hero h1{
+
+        font-size:
+            clamp(
+                46px,
+                14vw,
+                70px
+            );
+
+        letter-spacing:-1px;
+    }
+
+    .hero-eyebrow{
+
+        font-size:8px;
+
+        letter-spacing:2.5px;
+    }
+
+    .hero-subtitle{
+
+        font-size:18px;
+    }
+
+    .hero-role{
+
+        font-size:12px;
+    }
+
+    .hero-description{
+
+        font-size:14px;
+    }
+
+    .hero-actions .btn{
+
+        width:100%;
+    }
+
+    .terminal{
+
+        text-align:left;
+    }
+
+    .float-card{
+
+        opacity:.28;
+
+        transform:scale(.7);
+    }
+
+    .float-card.one{
+
+        left:-25px;
+        top:22%;
+    }
+
+    .float-card.two{
+
+        right:-30px;
+        top:35%;
+    }
+
+    .float-card.three{
+
+        right:-20px;
+        bottom:4%;
+    }
+
+    .metrics{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        margin:
+            0 5%
+            40px;
+    }
+
+    .metrics > div{
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.07);
+    }
+
+    .metrics > div:nth-child(2){
+
+        border-right:0;
+    }
+
+    .metrics > div:nth-child(3),
+    .metrics > div:nth-child(4){
+
+        border-bottom:0;
+    }
+
+    .section-head h2{
+
+        font-size:40px;
+    }
+
+    .section-head > a{
+
+        position:relative;
+
+        display:inline-block;
+
+        margin-top:18px;
+
+        bottom:auto;
+        right:auto;
+    }
+
+    .about-columns{
+
+        grid-template-columns:1fr;
+
+        gap:10px;
+    }
+
+    .skill-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .projects{
+
+        grid-template-columns:1fr;
+    }
+
+    .resource-tabs{
+
+        width:100%;
+
+        flex-direction:column;
+    }
+
+    .resource-tab{
+
+        width:100%;
+    }
+
+    .resource-category-head{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+    }
+
+    .resource-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .resource-card{
+
+        min-height:auto;
+    }
+
+    .resource-footer{
+
+        flex-direction:column;
+
+        line-height:1.6;
+    }
+
+    .philosophy{
+
+        padding:25px 18px;
+    }
+
+    .flow{
+
+        flex-direction:column;
+    }
+
+    .flow > div{
+
+        width:100%;
+    }
+
+    .flow > i{
+
+        transform:rotate(90deg);
+    }
+
+    .focus-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .stat-card.full{
+
+        grid-column:auto;
+    }
+
+    footer{
+
+        text-align:center;
+
+        flex-direction:column;
+
+        gap:8px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:420px){
+
+    .brand{
+
+        font-size:12px;
+    }
+
+    .nav-github{
+
+        font-size:9px;
+    }
+
+    .hero h1{
+
+        font-size:44px;
+    }
+
+    .photo-frame{
+
+        width:280px;
+    }
+
+    .metrics strong{
+
+        font-size:20px;
+    }
+
+    .metrics span{
+
+        font-size:10px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        scroll-behavior:auto !important;
+
+        transition-duration:.01ms !important;
+    }
+}
+
+</style>
 </head>
 
+
 <body>
+
+
+<!-- ========================================================
+     CINEMATIC BACKGROUND
+========================================================= -->
+
+<div class="rgb-orb orb-one"></div>
+<div class="rgb-orb orb-two"></div>
+<div class="rgb-orb orb-three"></div>
+
 <canvas id="matrix"></canvas>
+
 <div class="scanlines"></div>
+
+
+<!-- ========================================================
+     NAVIGATION
+========================================================= -->
 
 <header class="nav">
 
     <a class="brand" href="#home">
-        <span class="prompt">>_</span> SUDHEER<span class="dot">.</span>SEC
+
+        <span class="prompt">>_</span>
+
+        SUDHEER<span class="dot">.</span>SEC
+
     </a>
+
 
     <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#resources">Resources</a>
-        <a href="#method">Method</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-github"
-       href="https://github.com/sudheer-infosec/cybersecurity-portfolio"
-       target="_blank"
-       rel="noopener noreferrer">
-        GitHub ↗
-    </a>
 
-    <a class="research-nav"
-       href="https://deceptionshield.ai.studio/"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Suspicious Activity Research">
-        <span class="research-nav-icon">●</span>
-        SUSPICIOUS ACTIVITY RESEARCH
-        <span class="research-nav-arrow">↗</span>
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#resources">Resources</a>
+
+        <a href="#method">Method</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <!-- WORKING GITHUB LINK MOVED TO FINAL POSITION -->
+
+    <a
+        class="nav-github"
+        href="https://github.com/sudheer-infosec/cybersecurity-portfolio"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        GitHub ↗
+
     </a>
 
 </header>
 
+
+<main>
+
+
+<!-- ========================================================
+     HERO
+========================================================= -->
+
 <section id="home" class="hero">
-<div class="hero-grid"></div>
-<div class="hero-copy">
-<div class="hero-status">
-    <span class="status-dot"></span>
-    SECURITY OPERATIONS • ONLINE
-</div>
 
-<p class="hero-eyebrow">
-    CYBERSECURITY • SOC • DFIR • THREAT INVESTIGATION
-</p>
+    <div class="hero-grid"></div>
 
-<h1>
-    Cybersecurity.<br>
-    Investigation. <span>Defense.</span>
-</h1>
 
-<p class="hero-subtitle">
-    Building practical security labs, analyzing threats,
-    and developing real-world SOC &amp; DFIR capabilities.
-</p>
+    <div class="float-card one">
 
-<p class="hero-role">
-    Cybersecurity Analyst • Ethical Hacker • SOC | Blue Team
-    • Digital Forensics
-</p>
+        <span>THREAT</span>
 
-<p class="hero-description">
-    I'm <strong>Singuru Sudheer</strong> — a cybersecurity-focused
-    technologist building practical security labs, exploring
-    threat detection and digital forensics, and documenting
-    the journey from learning to real-world security practice.
-</p>
-<div class="hero-actions">
-<a class="btn primary" href="#projects">Explore Projects</a>
-<a class="btn ghost" href="https://github.com/sudheer-infosec/cybersecurity-portfolio" target="_blank" rel="noopener">View GitHub</a>
-</div>
-<div class="badges">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=00FF9C&center=true&vCenter=true&width=720&lines=Cybersecurity+Analyst;Ethical+Hacker;Cybersecurity+Mentor;SOC+%7C+Blue+Team;Network+Security;Threat+Detection;Security+Automation;Learning+%7C+Building+%7C+Securing" alt="Cybersecurity roles typing animation">
-</div>
-<div class="terminal">
-<div class="terminal-bar"><i></i><i></i><i></i><span>analyst@security-lab:~</span></div>
-<div class="terminal-body"><span class="green">root@lab</span>:~# <span id="typing"></span><span class="cursor">▋</span></div>
-</div>
-</div>
-
-<div class="hero-hud">
-<div class="photo-frame"><div class="photo-glow"></div><img src="profile.jpg" alt="Singuru Sudheer profile photo"></div>
-<div class="hud-card"><span>THREAT MONITOR</span><strong>DEFENSIVE MODE</strong><div class="meter"><b></b></div><small>Detection pipeline active</small></div>
-</div>
-</section>
-
-<section class="metrics">
-<div><strong>10+</strong><span>Security Projects</span></div>
-<div><strong>SOC</strong><span>Operations Focus</span></div>
-<div><strong>DFIR</strong><span>Investigation Focus</span></div>
-<div><strong>∞</strong><span>Learning Mode</span></div>
-</section>
-<!-- ===================== ABOUT ===================== -->
-<section id="about" class="section">
-
-    <div class="section-head">
-        <span>03 / ABOUT</span>
-        <h2>About Me</h2>
     </div>
 
-    <div class="about-grid">
 
-        <!-- PROFILE CARD -->
-        <div class="profile-card">
+    <div class="float-card two">
 
-            <div class="profile-image-wrap">
-                <img
-                    src="profile.jpg"
-                    alt="Singuru Sudheer - Cybersecurity"
-                    class="profile-image"
-                >
-            </div>
+        <span>DFIR</span>
 
-            <h3>Singuru Sudheer</h3>
+    </div>
 
-            <p class="profile-role">
-                Cybersecurity Analyst • Ethical Hacker
-            </p>
 
-            <div class="profile-chips">
-                <span>SOC</span>
-                <span>Blue Team</span>
-                <span>DFIR</span>
-            </div>
+    <div class="float-card three">
+
+        <span>SOC ACTIVE</span>
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <p class="hero-eyebrow">
+
+            CYBERSECURITY • SOC • DFIR • THREAT INVESTIGATION
+
+        </p>
+
+
+        <h1>
+
+            Cybersecurity.<br>
+
+            Investigation.
+
+            <span>Defense.</span>
+
+        </h1>
+
+
+        <p class="hero-subtitle">
+
+            Building practical security labs, analyzing threats,
+            and developing real-world SOC &amp; DFIR capabilities.
+
+        </p>
+
+
+        <p class="hero-role">
+
+            Cybersecurity Analyst • Ethical Hacker • SOC | Blue Team
+            • Digital Forensics
+
+        </p>
+
+
+        <p class="hero-description">
+
+            I'm <strong>Singuru Sudheer</strong> — a cybersecurity-focused
+            technologist building practical security labs, exploring
+            threat detection and digital forensics, and documenting
+            the journey from learning to real-world security practice.
+
+        </p>
+
+
+        <div class="hero-actions">
 
             <a
-                href="https://www.linkedin.com/in/singuru-sudheer-b4916b345"
+                class="btn primary"
+                href="#projects">
+
+                Explore Projects
+
+            </a>
+
+
+            <a
+                class="btn ghost"
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio"
                 target="_blank"
-                rel="noopener noreferrer"
-                class="profile-link"
-            >
-                LinkedIn ↗
+                rel="noopener noreferrer">
+
+                View GitHub
+
             </a>
 
         </div>
 
 
-        <!-- ABOUT CONTENT -->
+        <div class="badges">
+
+            <img
+                src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=9B8CFF&center=true&vCenter=true&width=720&lines=Cybersecurity+Analyst;Ethical+Hacker;Cybersecurity+Mentor;SOC+%7C+Blue+Team;Network+Security;Threat+Detection;Security+Automation;Learning+%7C+Building+%7C+Securing"
+                alt="Cybersecurity roles typing animation">
+
+        </div>
+
+
+        <div class="terminal">
+
+            <div class="terminal-bar">
+
+                <i></i>
+                <i></i>
+                <i></i>
+
+                <span>
+                    analyst@security-lab:~
+                </span>
+
+            </div>
+
+
+            <div class="terminal-body">
+
+                <span class="green">
+                    root@lab
+                </span>
+
+                :~#
+
+                <span id="typing"></span>
+
+                <span class="cursor">
+                    ▋
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO HUD -->
+
+    <div class="hero-hud">
+
+        <div class="photo-frame">
+
+            <div class="photo-glow"></div>
+
+            <img
+                src="profile.jpg"
+                alt="Singuru Sudheer profile photo">
+
+        </div>
+
+
+        <div class="hud-card">
+
+            <span>
+                THREAT MONITOR
+            </span>
+
+            <strong>
+                DEFENSIVE MODE
+            </strong>
+
+            <div class="meter">
+
+                <b></b>
+
+            </div>
+
+            <small>
+                Detection pipeline active
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     METRICS
+========================================================= -->
+
+<section class="metrics">
+
+    <div>
+
+        <strong>10+</strong>
+
+        <span>
+            Security Projects
+        </span>
+
+    </div>
+
+
+    <div>
+
+        <strong>SOC</strong>
+
+        <span>
+            Operations Focus
+        </span>
+
+    </div>
+
+
+    <div>
+
+        <strong>DFIR</strong>
+
+        <span>
+            Investigation Focus
+        </span>
+
+    </div>
+
+
+    <div>
+
+        <strong>∞</strong>
+
+        <span>
+            Learning Mode
+        </span>
+
+    </div>
+
+</section>
+
+
+<div class="rgb-line"></div>
+
+
+<!-- ========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about" class="section reveal">
+
+    <div class="section-head">
+
+        <span>
+            01 / ABOUT
+        </span>
+
+        <h2>
+            About Me
+        </h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+
+        <div class="profile-card">
+
+            <div class="profile-image-wrap">
+
+                <img
+                    src="profile.jpg"
+                    alt="Singuru Sudheer - Cybersecurity"
+                    class="profile-image">
+
+            </div>
+
+
+            <h3>
+                Singuru Sudheer
+            </h3>
+
+
+            <p class="profile-role">
+
+                Cybersecurity Analyst • Ethical Hacker
+
+            </p>
+
+
+            <div class="profile-chips">
+
+                <span>SOC</span>
+                <span>Blue Team</span>
+                <span>DFIR</span>
+
+            </div>
+
+
+            <a
+                href="https://www.linkedin.com/in/singuru-sudheer-b4916b345"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="profile-link">
+
+                LinkedIn ↗
+
+            </a>
+
+        </div>
+
+
         <div class="about-text">
 
             <p class="about-intro">
+
                 I'm <strong>Singuru Sudheer</strong> — a cybersecurity-focused
                 technologist building practical security labs, exploring threat
                 detection and digital forensics, and documenting the journey
                 from learning to real-world security operations.
+
             </p>
 
+
             <p>
+
                 My work focuses on developing practical capabilities across
                 <strong>SOC operations, SIEM, threat detection, incident response,
                 ethical hacking, network security, digital forensics and security
                 automation.</strong>
+
             </p>
+
 
             <p>
+
                 Rather than only studying theory, I believe in building labs,
                 analyzing real security events, investigating incidents,
-                documenting findings and continuously improving through hands-on
-                practice.
+                documenting findings and continuously improving through
+                hands-on practice.
+
             </p>
 
+
             <blockquote>
+
                 “Don't just watch tutorials. Build labs. Break things ethically.
                 Analyze what happened. Fix it. Document it.”
+
             </blockquote>
 
 
             <div class="about-columns">
 
-                <!-- CURRENT FOCUS -->
+
                 <div>
-                    <h3>Current Focus</h3>
+
+                    <h3>
+                        Current Focus
+                    </h3>
 
                     <ul>
+
                         <li>SOC &amp; Security Operations</li>
+
                         <li>SIEM &amp; Log Analysis</li>
+
                         <li>Threat Detection &amp; Incident Response</li>
+
                         <li>Digital Forensics &amp; DFIR</li>
+
                         <li>Network Security &amp; Ethical Hacking</li>
+
                         <li>Security Automation with Python</li>
+
                     </ul>
+
                 </div>
 
 
-                <!-- LEARNING PHILOSOPHY -->
                 <div>
-                    <h3>Learning Philosophy</h3>
+
+                    <h3>
+                        Learning Philosophy
+                    </h3>
 
                     <p>
-                        <strong>Learn → Practice → Build → Document → Improve</strong>
+                        <strong>
+                            Learn → Practice → Build → Document → Improve
+                        </strong>
                     </p>
 
                     <p>
+
                         I continuously explore Linux, networking, defensive
-                        security, digital forensics, Python automation, cloud
-                        security and the intersection of AI with cybersecurity.
+                        security, digital forensics, Python automation,
+                        cloud security and the intersection of AI with
+                        cybersecurity.
+
                     </p>
 
                     <p>
+
                         I also enjoy sharing practical knowledge and helping
-                        others learn cybersecurity through projects and hands-on
-                        security labs.
+                        others learn cybersecurity through projects and
+                        hands-on security labs.
+
                     </p>
+
                 </div>
 
             </div>
@@ -266,55 +4339,110 @@
 
 </section>
 
-<section id="skills" class="section dark-section">
+
+<!-- ========================================================
+     SKILLS
+========================================================= -->
+
+<section id="skills" class="section dark-section reveal">
 
     <div class="section-head">
-        <span>02 / ARSENAL</span>
-        <h2>Cybersecurity Arsenal</h2>
+
+        <span>
+            02 / ARSENAL
+        </span>
+
+        <h2>
+            Cybersecurity Arsenal
+        </h2>
+
     </div>
+
 
     <div class="skill-grid">
 
-        <div class="skill">
-            <b>◉ SOC &amp; SIEM</b>
-            <p>
-                Security monitoring, log analysis, alert triage and SIEM operations.
-            </p>
-        </div>
 
         <div class="skill">
-            <b>◈ DFIR</b>
+
+            <b>
+                ◉ SOC &amp; SIEM
+            </b>
+
             <p>
-                Digital evidence, timeline analysis and forensic investigation.
+                Security monitoring, log analysis, alert triage
+                and SIEM operations.
             </p>
+
         </div>
 
-        <div class="skill">
-            <b>⌁ Network Security</b>
-            <p>
-                Network reconnaissance, packet analysis and traffic investigation.
-            </p>
-        </div>
 
         <div class="skill">
-            <b>⚙ Threat Detection</b>
+
+            <b>
+                ◈ DFIR
+            </b>
+
             <p>
-                Endpoint telemetry, IDS detection, YARA and ATT&amp;CK analysis.
+                Digital evidence, timeline analysis and
+                forensic investigation.
             </p>
+
         </div>
 
-        <div class="skill">
-            <b>⌘ Security Automation</b>
-            <p>
-                Python, Bash, Git and practical security tooling.
-            </p>
-        </div>
 
         <div class="skill">
-            <b>▣ Platforms</b>
+
+            <b>
+                ⌁ Network Security
+            </b>
+
             <p>
-                Linux, Windows, Kali Linux and Docker environments.
+                Network reconnaissance, packet analysis
+                and traffic investigation.
             </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <b>
+                ⚙ Threat Detection
+            </b>
+
+            <p>
+                Endpoint telemetry, IDS detection,
+                YARA and ATT&amp;CK analysis.
+            </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <b>
+                ⌘ Security Automation
+            </b>
+
+            <p>
+                Python, Bash, Git and practical
+                security tooling.
+            </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <b>
+                ▣ Platforms
+            </b>
+
+            <p>
+                Linux, Windows, Kali Linux and
+                Docker environments.
+            </p>
+
         </div>
 
     </div>
@@ -343,287 +4471,3027 @@
 
     <div class="skills-languages">
 
-        <h3>Programming</h3>
+        <h3>
+            Programming
+        </h3>
+
 
         <div class="language-pills">
+
             <span>Python</span>
             <span>C</span>
             <span>HTML</span>
             <span>CSS</span>
             <span>JavaScript</span>
             <span>Bash</span>
+
         </div>
 
     </div>
 
 </section>
-<section id="projects" class="section">
-<div class="section-head"><span>03 / OPERATIONS</span><h2>Recently Updated Projects</h2><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio" target="_blank" rel="noopener">View repository →</a></div>
-<p class="section-intro">
-    My latest projects and active security work — practical labs,
-    investigations and security research.
-</p>
 
-<div class="projects">
 
-<article class="project featured">
-<div class="project-no">01</div><div class="project-icon">◈</div><h3>Wazuh SOC Detection Lab</h3><p>Hands-on SOC environment for security monitoring, alert analysis, detection engineering and incident investigation.</p><div class="tags"><span>SOC</span><span>Wazuh</span><span>SIEM</span><span>Suricata</span><span>Sysmon</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/wazuh-soc-detection-lab" target="_blank" rel="noopener">Open Project ↗</a></article>
+<!-- ========================================================
+     PROJECTS
+========================================================= -->
 
-<article class="project"><div class="project-no">02</div><div class="project-icon">☣</div><h3>Zeus Malware Hunt Lab</h3><p>Malware-hunting and threat-analysis project combining network detection, log analysis, memory forensics and YARA investigation.</p><div class="tags"><span>Malware</span><span>Suricata</span><span>Splunk</span><span>Volatility</span><span>YARA</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cybersecurity-SOC/Zeus-Malware-Hunt-Lab" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-<article class="project"><div class="project-no">03</div><div class="project-icon">⌬</div><h3>Cyber Intelligence Toolkit</h3><p>Practical cybersecurity intelligence toolkit for gathering, organizing and analyzing security-related information.</p><div class="tags"><span>Cyber Intel</span><span>OSINT</span><span>Research</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cybersecurity-SOC/Cyber-Intelligence-Toolkit" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-<article class="project"><div class="project-no">04</div><div class="project-icon">◌</div><h3>Digital Forensics Investigation Lab</h3><p>Practical digital-forensics environment for investigating evidence, correlating artifacts and documenting findings.</p><div class="tags"><span>DFIR</span><span>Evidence</span><span>Investigation</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cyber-Crime-Digital-Forensics/Digital-Forensics-Investigation-Lab" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-<article class="project"><div class="project-no">05</div><div class="project-icon">▣</div><h3>Mobile Forensics Open-Source Investigation</h3><p>Mobile-device investigation concepts combined with open-source digital investigation techniques.</p><div class="tags"><span>Mobile DFIR</span><span>OSINT</span><span>Investigation</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cyber-Crime-Digital-Forensics/Mobile-Forensics-Open-Source-Investigation" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-<article class="project"><div class="project-no">06</div><div class="project-icon">⌁</div><h3>Android Digital Forensics</h3><p>Evidence acquisition and analysis workflows for authorized mobile-device investigation scenarios.</p><div class="tags"><span>Android</span><span>Evidence</span><span>Mobile DFIR</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cyber-Crime-Digital-Forensics/Android-Digital-Forensics" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-<article class="project"><div class="project-no">07</div><div class="project-icon">◍</div><h3>CustodyGuard</h3><p>Company-related project focused on structured digital evidence and chain-of-custody workflows.</p><div class="tags"><span>Evidence</span><span>Forensics</span><span>Platform</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Company-Related-Projects/CustodyGuard" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-<article class="project"><div class="project-no">08</div><div class="project-icon">◈</div><h3>Forensic Evidence Platform</h3><p>Structured platform concept for handling forensic evidence and investigation workflows.</p><div class="tags"><span>DFIR</span><span>Evidence</span><span>Platform</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Company-Related-Projects/forensic-evidence-platform" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-<article class="project"><div class="project-no">09</div><div class="project-icon">◒</div><h3>Timesketch Investigation</h3><p>Timeline-based investigation work for correlating events and reconstructing incident activity.</p><div class="tags"><span>Timesketch</span><span>Timeline</span><span>DFIR</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Security-Tools/Timesketch" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-<article class="project"><div class="project-no">10</div><div class="project-icon">◐</div><h3>Volatility3</h3><p>Memory-forensics tooling and investigation workflows for analyzing volatile evidence.</p><div class="tags"><span>Volatility</span><span>Memory Forensics</span><span>DFIR</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Security-Tools/Volatility3" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-<article class="project"><div class="project-no">11</div><div class="project-icon">⌁</div><h3>Digital Evidence Toolkit</h3><p>Practical toolkit for supporting evidence handling, analysis and forensic investigation workflows.</p><div class="tags"><span>Digital Evidence</span><span>Forensics</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cyber-Crime-Digital-Forensics/Digital-Evidence-Toolkit" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-<article class="project"><div class="project-no">12</div><div class="project-icon">⌘</div><h3>Security Research</h3><p>Security research work covering investigation, experimentation, documentation and practical defensive learning.</p><div class="tags"><span>Research</span><span>Security</span><span>Analysis</span></div><a href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Security-Research/Security-Research" target="_blank" rel="noopener">Open Project ↗</a></article>
-
-</div>
-</section>
-
-<!-- ===================== RESOURCE HUB ===================== -->
-<section id="resources" class="section resources-section">
-<div class="section-head">
-<span>04 / RESOURCE HUB</span>
-<h2>Cybersecurity Knowledge Base</h2>
-</div>
-
-<p class="section-intro">
-A professionally curated collection of official cybersecurity documentation,
-standards, technical references and video learning resources for students,
-analysts and security practitioners.
-</p>
-
-<div class="resource-note">
-<div class="resource-note-icon">⌁</div>
-<div>
-<strong>LEARN FROM THE SOURCE.</strong>
-<p>These resources point directly to official organizations and established security communities. Use them to strengthen fundamentals, understand industry standards and build practical security knowledge.</p>
-</div>
-</div>
-
-<div class="resource-tabs">
-<button class="resource-tab active" data-resource-tab="docs">📄 DOCUMENTATION & PDFs</button>
-<button class="resource-tab" data-resource-tab="videos">🎥 VIDEO LEARNING</button>
-</div>
-
-<div id="docs" class="resource-panel active">
-<div class="resource-category-head">
-<div><span>01 / DOCUMENTATION</span><h3>Standards, Guides & Technical References</h3></div>
-<div class="resource-counter">20 RESOURCES</div>
-</div>
-
-<div class="resource-grid">
-
-<article class="resource-card"><div class="resource-number">01</div><div class="resource-icon">◈</div><span class="resource-type">NIST • FRAMEWORK</span><h4>Cybersecurity Framework 2.0</h4><p>Industry framework for managing and improving cybersecurity risk.</p><div class="resource-tags"><span>CSF</span><span>RISK</span><span>GOVERNANCE</span></div><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">02</div><div class="resource-icon">◉</div><span class="resource-type">NIST • INCIDENT RESPONSE</span><h4>SP 800-61 Rev. 3</h4><p>Current guidance for incident response planning and operations.</p><div class="resource-tags"><span>IR</span><span>SOC</span><span>DFIR</span></div><a href="https://csrc.nist.gov/pubs/sp/800/61/r3/final" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">03</div><div class="resource-icon">⌁</div><span class="resource-type">MITRE • KNOWLEDGE BASE</span><h4>MITRE ATT&CK</h4><p>Knowledge base for adversary tactics, techniques and procedures.</p><div class="resource-tags"><span>ATT&CK</span><span>TTPs</span><span>THREATS</span></div><a href="https://attack.mitre.org/" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">04</div><div class="resource-icon">◇</div><span class="resource-type">OWASP • APPLICATION SECURITY</span><h4>OWASP Top 10</h4><p>Core awareness resource for critical web application security risks.</p><div class="resource-tags"><span>WEB</span><span>APPSEC</span><span>OWASP</span></div><a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">05</div><div class="resource-icon">⌘</div><span class="resource-type">OWASP • TESTING</span><h4>Web Security Testing Guide</h4><p>Comprehensive methodology for authorized web security testing.</p><div class="resource-tags"><span>WSTG</span><span>TESTING</span><span>WEB</span></div><a href="https://wstg.owasp.org/" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">06</div><div class="resource-icon">▣</div><span class="resource-type">OWASP • CHEAT SHEETS</span><h4>OWASP Cheat Sheet Series</h4><p>Practical security guidance for developers and security practitioners.</p><div class="resource-tags"><span>SECURITY</span><span>DEV</span><span>REFERENCE</span></div><a href="https://cheatsheetseries.owasp.org/" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">07</div><div class="resource-icon">◍</div><span class="resource-type">WAZUH • SIEM / XDR</span><h4>Wazuh Documentation</h4><p>Official documentation for security monitoring, detection and response.</p><div class="resource-tags"><span>WAZUH</span><span>SIEM</span><span>SOC</span></div><a href="https://documentation.wazuh.com/current/getting-started/index.html" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">08</div><div class="resource-icon">◐</div><span class="resource-type">WIRESHARK • NETWORK SECURITY</span><h4>Wireshark Documentation</h4><p>Official documentation for packet analysis and network investigation.</p><div class="resource-tags"><span>PCAP</span><span>NETWORK</span><span>ANALYSIS</span></div><a href="https://www.wireshark.org/docs/index.html" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">09</div><div class="resource-icon">⬡</div><span class="resource-type">CISA • DEFENSIVE SECURITY</span><h4>Ransomware Guide</h4><p>Official guidance for preparing for and responding to ransomware.</p><div class="resource-tags"><span>CISA</span><span>RANSOMWARE</span><span>DEFENSE</span></div><a href="https://www.cisa.gov/stopransomware/ransomware-guide" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">10</div><div class="resource-icon">◌</div><span class="resource-type">NIST • DEVSECOPS</span><h4>DevSecOps Practices</h4><p>Guidance for integrating security throughout modern software development.</p><div class="resource-tags"><span>DEVSECOPS</span><span>SDLC</span><span>SECURITY</span></div><a href="https://pages.nist.gov/nccoe-devsecops/" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">11</div><div class="resource-icon">◎</div><span class="resource-type">NIST • THREAT INTELLIGENCE</span><h4>Cyber Threat Information Sharing</h4><p>Guidance for sharing and using cyber threat information.</p><div class="resource-tags"><span>CTI</span><span>THREATS</span><span>SHARING</span></div><a href="https://csrc.nist.gov/pubs/sp/800/150/final" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">12</div><div class="resource-icon">◈</div><span class="resource-type">NIST • DATA SECURITY</span><h4>Data Confidentiality</h4><p>Technical guidance for protecting sensitive data and information.</p><div class="resource-tags"><span>DATA</span><span>PRIVACY</span><span>SECURITY</span></div><a href="https://www.nccoe.nist.gov/publication/1800-28/VolA/index.html" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">13</div><div class="resource-icon">⌬</div><span class="resource-type">NIST • PUBLICATIONS</span><h4>NIST Cybersecurity Publications</h4><p>Official collection of cybersecurity standards, publications and guides.</p><div class="resource-tags"><span>NIST</span><span>STANDARDS</span><span>RESEARCH</span></div><a href="https://csrc.nist.gov/Publications" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">14</div><div class="resource-icon">◉</div><span class="resource-type">WAZUH • COMPLIANCE</span><h4>Wazuh NIST 800-53</h4><p>Wazuh documentation covering NIST 800-53 compliance capabilities.</p><div class="resource-tags"><span>WAZUH</span><span>NIST</span><span>COMPLIANCE</span></div><a href="https://documentation.wazuh.com/current/compliance/nist/index.html" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">15</div><div class="resource-icon">◇</div><span class="resource-type">WAZUH • THREAT INTELLIGENCE</span><h4>Wazuh MITRE Threat Intelligence</h4><p>Official Wazuh guidance for mapping and threat intelligence workflows.</p><div class="resource-tags"><span>MITRE</span><span>WAZUH</span><span>CTI</span></div><a href="https://documentation.wazuh.com/current/compliance/nist/threat-intelligence.html" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">16</div><div class="resource-icon">▤</div><span class="resource-type">CISA • EDUCATION</span><h4>Cybersecurity Education Resources</h4><p>Official cybersecurity education and training collection from CISA.</p><div class="resource-tags"><span>CISA</span><span>TRAINING</span><span>LEARNING</span></div><a href="https://www.cisa.gov/resources-tools/resources" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">17</div><div class="resource-icon">◍</div><span class="resource-type">NIST • FRAMEWORKS</span><h4>NIST Frameworks</h4><p>Explore NIST's cybersecurity and technology risk frameworks.</p><div class="resource-tags"><span>FRAMEWORKS</span><span>RISK</span><span>NIST</span></div><a href="https://www.nist.gov/frameworks" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">18</div><div class="resource-icon">⌁</div><span class="resource-type">NIST • INCIDENT RESPONSE</span><h4>NIST Incident Response Publications</h4><p>Central collection of NIST incident response publications and resources.</p><div class="resource-tags"><span>IR</span><span>SOC</span><span>DFIR</span></div><a href="https://csrc.nist.gov/Projects/incident-response/publications" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">19</div><div class="resource-icon">▥</div><span class="resource-type">NIST • LEARNING</span><h4>Cybersecurity Framework Learning</h4><p>Learning resources for understanding the NIST Cybersecurity Framework.</p><div class="resource-tags"><span>CSF</span><span>LEARNING</span><span>NIST</span></div><a href="https://www.nist.gov/cyberframework/csf-11-online-learning" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-<article class="resource-card"><div class="resource-number">20</div><div class="resource-icon">▣</div><span class="resource-type">OWASP • SECURITY VERIFICATION</span><h4>OWASP ASVS</h4><p>Application Security Verification Standard reference for secure applications.</p><div class="resource-tags"><span>ASVS</span><span>APPSEC</span><span>VERIFICATION</span></div><a href="https://cheatsheetseries.owasp.org/IndexASVS.html" target="_blank" rel="noopener">OPEN OFFICIAL RESOURCE ↗</a></article>
-
-</div>
-</div>
-
-<div id="videos" class="resource-panel">
-<div class="resource-category-head">
-<div><span>02 / VIDEO LEARNING</span><h3>Official Cybersecurity Learning</h3></div>
-<div class="resource-counter">20 RESOURCES</div>
-</div>
-
-<div class="resource-grid">
-
-<article class="resource-card video-card"><div class="resource-number">01</div><div class="resource-icon">▶</div><span class="resource-type">NIST • VIDEO LIBRARY</span><h4>NIST CSF Video Library</h4><p>Official videos explaining the Cybersecurity Framework and related concepts.</p><div class="resource-tags"><span>NIST</span><span>CSF</span><span>VIDEO</span></div><a href="https://www.nist.gov/cyberframework/videos" target="_blank" rel="noopener">WATCH / LEARN ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">02</div><div class="resource-icon">▶</div><span class="resource-type">NIST • CSF 2.0</span><h4>CSF 2.0 Overview</h4><p>Official introduction to the NIST Cybersecurity Framework 2.0.</p><div class="resource-tags"><span>CSF 2.0</span><span>NIST</span></div><a href="https://www.nist.gov/video/nist-cybersecurity-framework-csf-20-0" target="_blank" rel="noopener">WATCH VIDEO ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">03</div><div class="resource-icon">▶</div><span class="resource-type">NIST • WEBINAR</span><h4>Implementing CSF 2.0</h4><p>Official webinar focused on implementing the NIST CSF 2.0.</p><div class="resource-tags"><span>WEBINAR</span><span>CSF</span></div><a href="https://www.nist.gov/video/csf-20-webinar-series-implementing-csf-20-why-what-and-how" target="_blank" rel="noopener">WATCH WEBINAR ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">04</div><div class="resource-icon">▶</div><span class="resource-type">NIST • WEBINAR</span><h4>CSF 2.0 Community Profiles</h4><p>Learn how community profiles can support cybersecurity outcomes.</p><div class="resource-tags"><span>CSF</span><span>PROFILES</span></div><a href="https://www.nist.gov/video/nist-csf-20-community-profiles-webinar" target="_blank" rel="noopener">WATCH WEBINAR ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">05</div><div class="resource-icon">▶</div><span class="resource-type">NIST • SMALL BUSINESS</span><h4>Cybersecurity & Privacy Videos</h4><p>Practical cybersecurity and privacy learning for small organizations.</p><div class="resource-tags"><span>PRIVACY</span><span>SECURITY</span></div><a href="https://www.nist.gov/itl/smallbusinesscyber/videos" target="_blank" rel="noopener">WATCH / LEARN ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">06</div><div class="resource-icon">▶</div><span class="resource-type">WIRESHARK • LEARNING</span><h4>Wireshark Learn</h4><p>Official learning resources for packet analysis and network visibility.</p><div class="resource-tags"><span>PCAP</span><span>NETWORK</span></div><a href="https://www.wireshark.org/learn/" target="_blank" rel="noopener">LEARN ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">07</div><div class="resource-icon">▶</div><span class="resource-type">WIRESHARK • COMMUNITY</span><h4>Wireshark Community Videos</h4><p>Tutorials, conference sessions and expert security presentations.</p><div class="resource-tags"><span>WIRESHARK</span><span>VIDEOS</span></div><a href="https://www.wireshark.org/community" target="_blank" rel="noopener">WATCH / EXPLORE ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">08</div><div class="resource-icon">▶</div><span class="resource-type">UNIT 42 • NETWORK SECURITY</span><h4>Wireshark Workshop Videos</h4><p>Practical packet-analysis workshops from Palo Alto Networks Unit 42.</p><div class="resource-tags"><span>WIRESHARK</span><span>PCAP</span></div><a href="https://unit42.paloaltonetworks.com/wireshark-workshop-videos/" target="_blank" rel="noopener">WATCH WORKSHOPS ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">09</div><div class="resource-icon">▶</div><span class="resource-type">WAZUH • TRAINING</span><h4>Wazuh Training Courses</h4><p>Official training resources for learning Wazuh security operations.</p><div class="resource-tags"><span>WAZUH</span><span>SOC</span></div><a href="https://wazuh.com/services/training-courses/" target="_blank" rel="noopener">EXPLORE TRAINING ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">10</div><div class="resource-icon">▶</div><span class="resource-type">WAZUH • OFFICIAL</span><h4>Wazuh Official Learning</h4><p>Start with official Wazuh documentation and practical learning material.</p><div class="resource-tags"><span>WAZUH</span><span>SIEM</span></div><a href="https://documentation.wazuh.com/current/getting-started/index.html" target="_blank" rel="noopener">START LEARNING ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">11</div><div class="resource-icon">▶</div><span class="resource-type">CISA • TRAINING</span><h4>CDM Dashboard Courses</h4><p>Cybersecurity micro-learning and training resources from CISA.</p><div class="resource-tags"><span>CISA</span><span>TRAINING</span></div><a href="https://www.cisa.gov/resources-tools/training/cdm-dashboard-courses" target="_blank" rel="noopener">LEARN ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">12</div><div class="resource-icon">▶</div><span class="resource-type">CISA • INSIDER THREAT</span><h4>Insider Threat Resources</h4><p>Official educational resources and videos covering insider-threat mitigation.</p><div class="resource-tags"><span>CISA</span><span>DEFENSE</span></div><a href="https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/resources-and-tools" target="_blank" rel="noopener">LEARN ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">13</div><div class="resource-icon">▶</div><span class="resource-type">CISA • CYBER HYGIENE</span><h4>Cyber Hygiene Services</h4><p>Official resources for strengthening basic defensive security practices.</p><div class="resource-tags"><span>CYBER HYGIENE</span><span>DEFENSE</span></div><a href="https://www.cisa.gov/cyber-hygiene-services" target="_blank" rel="noopener">WATCH / LEARN ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">14</div><div class="resource-icon">▶</div><span class="resource-type">NIST • EVENTS</span><h4>NIST Events & Presentations</h4><p>Archive of official cybersecurity events, presentations and sessions.</p><div class="resource-tags"><span>NIST</span><span>EVENTS</span></div><a href="https://www.nist.gov/cyberframework/events-and-presentation-archive" target="_blank" rel="noopener">EXPLORE ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">15</div><div class="resource-icon">▶</div><span class="resource-type">NIST • ONLINE LEARNING</span><h4>NIST CSF Online Learning</h4><p>Structured learning material for understanding cybersecurity frameworks.</p><div class="resource-tags"><span>CSF</span><span>LEARNING</span></div><a href="https://www.nist.gov/cyberframework/csf-11-online-learning" target="_blank" rel="noopener">LEARN ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">16</div><div class="resource-icon">▶</div><span class="resource-type">NIST • CSF RESOURCES</span><h4>CSF Resource Center</h4><p>Official collection of NIST CSF resources, guides and presentations.</p><div class="resource-tags"><span>CSF</span><span>REFERENCE</span></div><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">EXPLORE ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">17</div><div class="resource-icon">▶</div><span class="resource-type">WIRESHARK • DOCUMENTATION</span><h4>Wireshark Tutorials & Guides</h4><p>Official learning material supporting network analysis workflows.</p><div class="resource-tags"><span>NETWORK</span><span>ANALYSIS</span></div><a href="https://www.wireshark.org/docs/index.html" target="_blank" rel="noopener">LEARN ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">18</div><div class="resource-icon">▶</div><span class="resource-type">CISA • RESOURCES</span><h4>CISA Cybersecurity Resources</h4><p>Official cybersecurity resources, guidance and learning material.</p><div class="resource-tags"><span>CISA</span><span>SECURITY</span></div><a href="https://www.cisa.gov/resources-tools/resources" target="_blank" rel="noopener">EXPLORE ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">19</div><div class="resource-icon">▶</div><span class="resource-type">NIST • PRESENTATIONS</span><h4>Cybersecurity Presentations</h4><p>Official presentations and educational material from NIST.</p><div class="resource-tags"><span>NIST</span><span>RESEARCH</span></div><a href="https://www.nist.gov/cyberframework/events-and-presentation-archive" target="_blank" rel="noopener">EXPLORE ↗</a></article>
-
-<article class="resource-card video-card"><div class="resource-number">20</div><div class="resource-icon">▶</div><span class="resource-type">SECURITY LEARNING</span><h4>Cybersecurity Learning Library</h4><p>A starting point for exploring official cybersecurity education resources.</p><div class="resource-tags"><span>LEARNING</span><span>SECURITY</span></div><a href="https://www.cisa.gov/resources-tools/resources" target="_blank" rel="noopener">START LEARNING ↗</a></article>
-
-</div>
-</div>
-
-<div class="resource-footer">
-<span>▣ CURATED FOR PRACTICAL SECURITY LEARNING</span>
-<span>LEARN • PRACTICE • BUILD • DOCUMENT • IMPROVE</span>
-</div>
-
-</section>
-
-<section id="method" class="section investigation">
-<div class="section-head"><span>05 / METHOD</span><h2>Learning Philosophy</h2></div>
-<div class="philosophy">
-<p>“Don't just watch tutorials. <strong>Build labs. Break things ethically. Analyze what happened. Fix it. Document it.</strong>”</p>
-<div class="flow">
-<div><span>01</span><b>LEARN</b><small>Understand the fundamentals</small></div><i>→</i>
-<div><span>02</span><b>PRACTICE</b><small>Work in authorized labs</small></div><i>→</i>
-<div><span>03</span><b>BUILD</b><small>Create practical projects</small></div><i>→</i>
-<div><span>04</span><b>DOCUMENT</b><small>Record evidence and findings</small></div><i>→</i>
-<div><span>05</span><b>IMPROVE</b><small>Iterate and deepen skills</small></div>
-</div>
-</div>
-</section>
-
-<section class="section roadmap">
-<div class="section-head"><span>06 / CURRENT FOCUS</span><h2>What I'm Building Toward</h2></div>
-<div class="focus-grid">
-<span>🛡️ SOC & Blue Team</span><span>🚨 Threat Detection</span><span>🔎 Digital Forensics</span><span>🌐 Network Security</span><span>🐧 Linux Security</span><span>🐍 Python Security Automation</span><span>☁️ Cloud Security</span><span>🤖 AI + Cybersecurity</span><span>📚 Continuous Learning</span>
-</div>
-</section>
-
-<section id="github-stats" class="section stats-section">
-<div class="section-head"><span>07 / GITHUB</span><h2>GitHub Statistics</h2></div>
-<div class="stats-grid">
-<div class="stat-card full"><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=sudheer-infosec&theme=github_dark" alt="GitHub profile details"></div>
-<div class="stat-card"><img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=sudheer-infosec&theme=github_dark" alt="Most commit language"></div>
-<div class="stat-card"><img src="https://streak-stats.demolab.com?user=sudheer-infosec&theme=github-dark-blue&hide_border=true" alt="GitHub streak"></div>
-</div>
-<div class="snake"><h3>Contribution Snake</h3><img src="https://raw.githubusercontent.com/sudheer-infosec/sudheer-infosec/output/github-contribution-grid-snake-dark.svg" alt="GitHub contribution snake"></div>
-</section>
-<!-- ===================== CONNECT ===================== -->
-<section id="contact" class="section contact-section">
+<section id="projects" class="section reveal">
 
     <div class="section-head">
-        <span>08 / CONNECT</span>
-        <h2>Let's Connect</h2>
+
+        <span>
+            03 / OPERATIONS
+        </span>
+
+        <h2>
+            Recently Updated Projects
+        </h2>
+
+        <a
+            href="https://github.com/sudheer-infosec/cybersecurity-portfolio"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            View repository →
+
+        </a>
+
     </div>
+
+
+    <p class="section-intro">
+
+        My latest projects and active security work —
+        practical labs, investigations and security research.
+
+    </p>
+
+
+    <div class="projects">
+
+
+        <article class="project tilt-card featured">
+
+            <div class="project-no">01</div>
+
+            <div class="project-icon">◈</div>
+
+            <h3>
+                Wazuh SOC Detection Lab
+            </h3>
+
+            <p>
+                Hands-on SOC environment for security monitoring,
+                alert analysis, detection engineering and
+                incident investigation.
+            </p>
+
+            <div class="tags">
+                <span>SOC</span>
+                <span>Wazuh</span>
+                <span>SIEM</span>
+                <span>Suricata</span>
+                <span>Sysmon</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/wazuh-soc-detection-lab"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">02</div>
+
+            <div class="project-icon">☣</div>
+
+            <h3>
+                Zeus Malware Hunt Lab
+            </h3>
+
+            <p>
+                Malware-hunting and threat-analysis project combining
+                network detection, log analysis, memory forensics
+                and YARA investigation.
+            </p>
+
+            <div class="tags">
+                <span>Malware</span>
+                <span>Suricata</span>
+                <span>Splunk</span>
+                <span>Volatility</span>
+                <span>YARA</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cybersecurity-SOC/Zeus-Malware-Hunt-Lab"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">03</div>
+
+            <div class="project-icon">⌬</div>
+
+            <h3>
+                Cyber Intelligence Toolkit
+            </h3>
+
+            <p>
+                Practical cybersecurity intelligence toolkit for
+                gathering, organizing and analyzing security-related
+                information.
+            </p>
+
+            <div class="tags">
+                <span>Cyber Intel</span>
+                <span>OSINT</span>
+                <span>Research</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cybersecurity-SOC/Cyber-Intelligence-Toolkit"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">04</div>
+
+            <div class="project-icon">◌</div>
+
+            <h3>
+                Digital Forensics Investigation Lab
+            </h3>
+
+            <p>
+                Practical digital-forensics environment for investigating
+                evidence, correlating artifacts and documenting findings.
+            </p>
+
+            <div class="tags">
+                <span>DFIR</span>
+                <span>Evidence</span>
+                <span>Investigation</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cyber-Crime-Digital-Forensics/Digital-Forensics-Investigation-Lab"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">05</div>
+
+            <div class="project-icon">▣</div>
+
+            <h3>
+                Mobile Forensics Open-Source Investigation
+            </h3>
+
+            <p>
+                Mobile-device investigation concepts combined with
+                open-source digital investigation techniques.
+            </p>
+
+            <div class="tags">
+                <span>Mobile DFIR</span>
+                <span>OSINT</span>
+                <span>Investigation</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cyber-Crime-Digital-Forensics/Mobile-Forensics-Open-Source-Investigation"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">06</div>
+
+            <div class="project-icon">⌁</div>
+
+            <h3>
+                Android Digital Forensics
+            </h3>
+
+            <p>
+                Evidence acquisition and analysis workflows for
+                authorized mobile-device investigation scenarios.
+            </p>
+
+            <div class="tags">
+                <span>Android</span>
+                <span>Evidence</span>
+                <span>Mobile DFIR</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cyber-Crime-Digital-Forensics/Android-Digital-Forensics"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">07</div>
+
+            <div class="project-icon">◍</div>
+
+            <h3>
+                CustodyGuard
+            </h3>
+
+            <p>
+                Company-related project focused on structured digital
+                evidence and chain-of-custody workflows.
+            </p>
+
+            <div class="tags">
+                <span>Evidence</span>
+                <span>Forensics</span>
+                <span>Platform</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Company-Related-Projects/CustodyGuard"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">08</div>
+
+            <div class="project-icon">◈</div>
+
+            <h3>
+                Forensic Evidence Platform
+            </h3>
+
+            <p>
+                Structured platform concept for handling forensic
+                evidence and investigation workflows.
+            </p>
+
+            <div class="tags">
+                <span>DFIR</span>
+                <span>Evidence</span>
+                <span>Platform</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Company-Related-Projects/forensic-evidence-platform"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">09</div>
+
+            <div class="project-icon">◒</div>
+
+            <h3>
+                Timesketch Investigation
+            </h3>
+
+            <p>
+                Timeline-based investigation work for correlating events
+                and reconstructing incident activity.
+            </p>
+
+            <div class="tags">
+                <span>Timesketch</span>
+                <span>Timeline</span>
+                <span>DFIR</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Security-Tools/Timesketch"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">10</div>
+
+            <div class="project-icon">◐</div>
+
+            <h3>
+                Volatility3
+            </h3>
+
+            <p>
+                Memory-forensics tooling and investigation workflows
+                for analyzing volatile evidence.
+            </p>
+
+            <div class="tags">
+                <span>Volatility</span>
+                <span>Memory Forensics</span>
+                <span>DFIR</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Security-Tools/Volatility3"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">11</div>
+
+            <div class="project-icon">⌁</div>
+
+            <h3>
+                Digital Evidence Toolkit
+            </h3>
+
+            <p>
+                Practical toolkit for supporting evidence handling,
+                analysis and forensic investigation workflows.
+            </p>
+
+            <div class="tags">
+                <span>Digital Evidence</span>
+                <span>Forensics</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Cyber-Crime-Digital-Forensics/Digital-Evidence-Toolkit"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+
+        <article class="project tilt-card">
+
+            <div class="project-no">12</div>
+
+            <div class="project-icon">⌘</div>
+
+            <h3>
+                Security Research
+            </h3>
+
+            <p>
+                Security research work covering investigation,
+                experimentation, documentation and practical
+                defensive learning.
+            </p>
+
+            <div class="tags">
+                <span>Research</span>
+                <span>Security</span>
+                <span>Analysis</span>
+            </div>
+
+            <a
+                href="https://github.com/sudheer-infosec/cybersecurity-portfolio/tree/main/Security-Research/Security-Research"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Open Project ↗
+
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     RESOURCE HUB
+========================================================= -->
+
+<section id="resources" class="section resources-section reveal">
+
+    <div class="section-head">
+
+        <span>
+            04 / RESOURCE HUB
+        </span>
+
+        <h2>
+            Cybersecurity Knowledge Base
+        </h2>
+
+    </div>
+
+
+    <p class="section-intro">
+
+        A professionally curated collection of official cybersecurity
+        documentation, standards, technical references and video learning
+        resources for students, analysts and security practitioners.
+
+    </p>
+
+
+    <div class="resource-note">
+
+        <div class="resource-note-icon">
+            ⌁
+        </div>
+
+        <div>
+
+            <strong>
+                LEARN FROM THE SOURCE.
+            </strong>
+
+            <p>
+
+                These resources point directly to official organizations
+                and established security communities. Use them to strengthen
+                fundamentals, understand industry standards and build
+                practical security knowledge.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="resource-tabs">
+
+        <button
+            class="resource-tab active"
+            data-resource-tab="docs">
+
+            📄 DOCUMENTATION &amp; PDFs
+
+        </button>
+
+
+        <button
+            class="resource-tab"
+            data-resource-tab="videos">
+
+            🎥 VIDEO LEARNING
+
+        </button>
+
+    </div>
+
+
+    <!-- DOCUMENTATION -->
+
+    <div id="docs" class="resource-panel active">
+
+        <div class="resource-category-head">
+
+            <div>
+
+                <span>
+                    01 / DOCUMENTATION
+                </span>
+
+                <h3>
+                    Standards, Guides &amp; Technical References
+                </h3>
+
+            </div>
+
+            <div class="resource-counter">
+                20 RESOURCES
+            </div>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">01</div>
+
+                <div class="resource-icon">◈</div>
+
+                <span class="resource-type">
+                    NIST • FRAMEWORK
+                </span>
+
+                <h4>
+                    Cybersecurity Framework 2.0
+                </h4>
+
+                <p>
+                    Industry framework for managing and improving
+                    cybersecurity risk.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CSF</span>
+                    <span>RISK</span>
+                    <span>GOVERNANCE</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/cyberframework"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">02</div>
+
+                <div class="resource-icon">◉</div>
+
+                <span class="resource-type">
+                    NIST • INCIDENT RESPONSE
+                </span>
+
+                <h4>
+                    SP 800-61 Rev. 3
+                </h4>
+
+                <p>
+                    Current guidance for incident response planning
+                    and operations.
+                </p>
+
+                <div class="resource-tags">
+                    <span>IR</span>
+                    <span>SOC</span>
+                    <span>DFIR</span>
+                </div>
+
+                <a
+                    href="https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">03</div>
+
+                <div class="resource-icon">⌁</div>
+
+                <span class="resource-type">
+                    MITRE • KNOWLEDGE BASE
+                </span>
+
+                <h4>
+                    MITRE ATT&amp;CK
+                </h4>
+
+                <p>
+                    Knowledge base for adversary tactics, techniques
+                    and procedures.
+                </p>
+
+                <div class="resource-tags">
+                    <span>ATT&amp;CK</span>
+                    <span>TTPs</span>
+                    <span>THREATS</span>
+                </div>
+
+                <a
+                    href="https://attack.mitre.org/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">04</div>
+
+                <div class="resource-icon">◇</div>
+
+                <span class="resource-type">
+                    OWASP • APPLICATION SECURITY
+                </span>
+
+                <h4>
+                    OWASP Top 10
+                </h4>
+
+                <p>
+                    Core awareness resource for critical web application
+                    security risks.
+                </p>
+
+                <div class="resource-tags">
+                    <span>WEB</span>
+                    <span>APPSEC</span>
+                    <span>OWASP</span>
+                </div>
+
+                <a
+                    href="https://owasp.org/www-project-top-ten/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">05</div>
+
+                <div class="resource-icon">⌘</div>
+
+                <span class="resource-type">
+                    OWASP • TESTING
+                </span>
+
+                <h4>
+                    Web Security Testing Guide
+                </h4>
+
+                <p>
+                    Comprehensive methodology for authorized
+                    web security testing.
+                </p>
+
+                <div class="resource-tags">
+                    <span>WSTG</span>
+                    <span>TESTING</span>
+                    <span>WEB</span>
+                </div>
+
+                <a
+                    href="https://wstg.owasp.org/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">06</div>
+
+                <div class="resource-icon">▣</div>
+
+                <span class="resource-type">
+                    OWASP • CHEAT SHEETS
+                </span>
+
+                <h4>
+                    OWASP Cheat Sheet Series
+                </h4>
+
+                <p>
+                    Practical security guidance for developers
+                    and security practitioners.
+                </p>
+
+                <div class="resource-tags">
+                    <span>SECURITY</span>
+                    <span>DEV</span>
+                    <span>REFERENCE</span>
+                </div>
+
+                <a
+                    href="https://cheatsheetseries.owasp.org/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">07</div>
+
+                <div class="resource-icon">◍</div>
+
+                <span class="resource-type">
+                    WAZUH • SIEM / XDR
+                </span>
+
+                <h4>
+                    Wazuh Documentation
+                </h4>
+
+                <p>
+                    Official documentation for security monitoring,
+                    detection and response.
+                </p>
+
+                <div class="resource-tags">
+                    <span>WAZUH</span>
+                    <span>SIEM</span>
+                    <span>SOC</span>
+                </div>
+
+                <a
+                    href="https://documentation.wazuh.com/current/getting-started/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">08</div>
+
+                <div class="resource-icon">◐</div>
+
+                <span class="resource-type">
+                    WIRESHARK • NETWORK SECURITY
+                </span>
+
+                <h4>
+                    Wireshark Documentation
+                </h4>
+
+                <p>
+                    Official documentation for packet analysis
+                    and network investigation.
+                </p>
+
+                <div class="resource-tags">
+                    <span>PCAP</span>
+                    <span>NETWORK</span>
+                    <span>ANALYSIS</span>
+                </div>
+
+                <a
+                    href="https://www.wireshark.org/docs/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">09</div>
+
+                <div class="resource-icon">⬡</div>
+
+                <span class="resource-type">
+                    CISA • DEFENSIVE SECURITY
+                </span>
+
+                <h4>
+                    Ransomware Guide
+                </h4>
+
+                <p>
+                    Official guidance for preparing for and responding
+                    to ransomware.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CISA</span>
+                    <span>RANSOMWARE</span>
+                    <span>DEFENSE</span>
+                </div>
+
+                <a
+                    href="https://www.cisa.gov/stopransomware/ransomware-guide"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">10</div>
+
+                <div class="resource-icon">◌</div>
+
+                <span class="resource-type">
+                    NIST • DEVSECOPS
+                </span>
+
+                <h4>
+                    DevSecOps Practices
+                </h4>
+
+                <p>
+                    Guidance for integrating security throughout
+                    modern software development.
+                </p>
+
+                <div class="resource-tags">
+                    <span>DEVSECOPS</span>
+                    <span>SDLC</span>
+                    <span>SECURITY</span>
+                </div>
+
+                <a
+                    href="https://pages.nist.gov/nccoe-devsecops/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">11</div>
+
+                <div class="resource-icon">◎</div>
+
+                <span class="resource-type">
+                    NIST • THREAT INTELLIGENCE
+                </span>
+
+                <h4>
+                    Cyber Threat Information Sharing
+                </h4>
+
+                <p>
+                    Guidance for sharing and using cyber threat
+                    information.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CTI</span>
+                    <span>THREATS</span>
+                    <span>SHARING</span>
+                </div>
+
+                <a
+                    href="https://csrc.nist.gov/pubs/sp/800/150/final"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">12</div>
+
+                <div class="resource-icon">◈</div>
+
+                <span class="resource-type">
+                    NIST • DATA SECURITY
+                </span>
+
+                <h4>
+                    Data Confidentiality
+                </h4>
+
+                <p>
+                    Technical guidance for protecting sensitive
+                    data and information.
+                </p>
+
+                <div class="resource-tags">
+                    <span>DATA</span>
+                    <span>PRIVACY</span>
+                    <span>SECURITY</span>
+                </div>
+
+                <a
+                    href="https://www.nccoe.nist.gov/publication/1800-28/VolA/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">13</div>
+
+                <div class="resource-icon">⌬</div>
+
+                <span class="resource-type">
+                    NIST • PUBLICATIONS
+                </span>
+
+                <h4>
+                    NIST Cybersecurity Publications
+                </h4>
+
+                <p>
+                    Official collection of cybersecurity standards,
+                    publications and guides.
+                </p>
+
+                <div class="resource-tags">
+                    <span>NIST</span>
+                    <span>STANDARDS</span>
+                    <span>RESEARCH</span>
+                </div>
+
+                <a
+                    href="https://csrc.nist.gov/Publications"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">14</div>
+
+                <div class="resource-icon">◉</div>
+
+                <span class="resource-type">
+                    WAZUH • COMPLIANCE
+                </span>
+
+                <h4>
+                    Wazuh NIST 800-53
+                </h4>
+
+                <p>
+                    Wazuh documentation covering NIST 800-53
+                    compliance capabilities.
+                </p>
+
+                <div class="resource-tags">
+                    <span>WAZUH</span>
+                    <span>NIST</span>
+                    <span>COMPLIANCE</span>
+                </div>
+
+                <a
+                    href="https://documentation.wazuh.com/current/compliance/nist/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">15</div>
+
+                <div class="resource-icon">◇</div>
+
+                <span class="resource-type">
+                    WAZUH • THREAT INTELLIGENCE
+                </span>
+
+                <h4>
+                    Wazuh MITRE Threat Intelligence
+                </h4>
+
+                <p>
+                    Official Wazuh guidance for mapping and
+                    threat intelligence workflows.
+                </p>
+
+                <div class="resource-tags">
+                    <span>MITRE</span>
+                    <span>WAZUH</span>
+                    <span>CTI</span>
+                </div>
+
+                <a
+                    href="https://documentation.wazuh.com/current/compliance/nist/threat-intelligence.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">16</div>
+
+                <div class="resource-icon">▤</div>
+
+                <span class="resource-type">
+                    CISA • EDUCATION
+                </span>
+
+                <h4>
+                    Cybersecurity Education Resources
+                </h4>
+
+                <p>
+                    Official cybersecurity education and training
+                    collection from CISA.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CISA</span>
+                    <span>TRAINING</span>
+                    <span>LEARNING</span>
+                </div>
+
+                <a
+                    href="https://www.cisa.gov/resources-tools/resources"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">17</div>
+
+                <div class="resource-icon">◍</div>
+
+                <span class="resource-type">
+                    NIST • FRAMEWORKS
+                </span>
+
+                <h4>
+                    NIST Frameworks
+                </h4>
+
+                <p>
+                    Explore NIST's cybersecurity and technology
+                    risk frameworks.
+                </p>
+
+                <div class="resource-tags">
+                    <span>FRAMEWORKS</span>
+                    <span>RISK</span>
+                    <span>NIST</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/frameworks"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">18</div>
+
+                <div class="resource-icon">⌁</div>
+
+                <span class="resource-type">
+                    NIST • INCIDENT RESPONSE
+                </span>
+
+                <h4>
+                    NIST Incident Response Publications
+                </h4>
+
+                <p>
+                    Central collection of NIST incident response
+                    publications and resources.
+                </p>
+
+                <div class="resource-tags">
+                    <span>IR</span>
+                    <span>SOC</span>
+                    <span>DFIR</span>
+                </div>
+
+                <a
+                    href="https://csrc.nist.gov/Projects/incident-response/publications"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">19</div>
+
+                <div class="resource-icon">▥</div>
+
+                <span class="resource-type">
+                    NIST • LEARNING
+                </span>
+
+                <h4>
+                    Cybersecurity Framework Learning
+                </h4>
+
+                <p>
+                    Learning resources for understanding the NIST
+                    Cybersecurity Framework.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CSF</span>
+                    <span>LEARNING</span>
+                    <span>NIST</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/cyberframework/csf-11-online-learning"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card tilt-card">
+
+                <div class="resource-number">20</div>
+
+                <div class="resource-icon">▣</div>
+
+                <span class="resource-type">
+                    OWASP • SECURITY VERIFICATION
+                </span>
+
+                <h4>
+                    OWASP ASVS
+                </h4>
+
+                <p>
+                    Application Security Verification Standard
+                    reference for secure applications.
+                </p>
+
+                <div class="resource-tags">
+                    <span>ASVS</span>
+                    <span>APPSEC</span>
+                    <span>VERIFICATION</span>
+                </div>
+
+                <a
+                    href="https://cheatsheetseries.owasp.org/IndexASVS.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    OPEN OFFICIAL RESOURCE ↗
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         VIDEO RESOURCES
+    ====================================================== -->
+
+    <div id="videos" class="resource-panel">
+
+        <div class="resource-category-head">
+
+            <div>
+
+                <span>
+                    02 / VIDEO LEARNING
+                </span>
+
+                <h3>
+                    Official Cybersecurity Learning
+                </h3>
+
+            </div>
+
+            <div class="resource-counter">
+                20 RESOURCES
+            </div>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">01</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    NIST • VIDEO LIBRARY
+                </span>
+
+                <h4>
+                    NIST CSF Video Library
+                </h4>
+
+                <p>
+                    Official videos explaining the Cybersecurity
+                    Framework and related concepts.
+                </p>
+
+                <div class="resource-tags">
+                    <span>NIST</span>
+                    <span>CSF</span>
+                    <span>VIDEO</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/cyberframework/videos"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    WATCH / LEARN ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">02</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    NIST • CSF 2.0
+                </span>
+
+                <h4>
+                    CSF 2.0 Overview
+                </h4>
+
+                <p>
+                    Official introduction to the NIST
+                    Cybersecurity Framework 2.0.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CSF 2.0</span>
+                    <span>NIST</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/video/nist-cybersecurity-framework-csf-20-0"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    WATCH VIDEO ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">03</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    NIST • WEBINAR
+                </span>
+
+                <h4>
+                    Implementing CSF 2.0
+                </h4>
+
+                <p>
+                    Official webinar focused on implementing
+                    the NIST CSF 2.0.
+                </p>
+
+                <div class="resource-tags">
+                    <span>WEBINAR</span>
+                    <span>CSF</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/video/csf-20-webinar-series-implementing-csf-20-why-what-and-how"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    WATCH WEBINAR ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">04</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    NIST • WEBINAR
+                </span>
+
+                <h4>
+                    CSF 2.0 Community Profiles
+                </h4>
+
+                <p>
+                    Learn how community profiles can support
+                    cybersecurity outcomes.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CSF</span>
+                    <span>PROFILES</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/video/nist-csf-20-community-profiles-webinar"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    WATCH WEBINAR ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">05</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    NIST • SMALL BUSINESS
+                </span>
+
+                <h4>
+                    Cybersecurity &amp; Privacy Videos
+                </h4>
+
+                <p>
+                    Practical cybersecurity and privacy learning
+                    for small organizations.
+                </p>
+
+                <div class="resource-tags">
+                    <span>PRIVACY</span>
+                    <span>SECURITY</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/itl/smallbusinesscyber/videos"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    WATCH / LEARN ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">06</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    WIRESHARK • LEARNING
+                </span>
+
+                <h4>
+                    Wireshark Learn
+                </h4>
+
+                <p>
+                    Official learning resources for packet analysis
+                    and network visibility.
+                </p>
+
+                <div class="resource-tags">
+                    <span>PCAP</span>
+                    <span>NETWORK</span>
+                </div>
+
+                <a
+                    href="https://www.wireshark.org/learn/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    LEARN ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">07</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    WIRESHARK • COMMUNITY
+                </span>
+
+                <h4>
+                    Wireshark Community Videos
+                </h4>
+
+                <p>
+                    Tutorials, conference sessions and expert
+                    security presentations.
+                </p>
+
+                <div class="resource-tags">
+                    <span>WIRESHARK</span>
+                    <span>VIDEOS</span>
+                </div>
+
+                <a
+                    href="https://www.wireshark.org/community"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    WATCH / EXPLORE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">08</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    UNIT 42 • NETWORK SECURITY
+                </span>
+
+                <h4>
+                    Wireshark Workshop Videos
+                </h4>
+
+                <p>
+                    Practical packet-analysis workshops from
+                    Palo Alto Networks Unit 42.
+                </p>
+
+                <div class="resource-tags">
+                    <span>WIRESHARK</span>
+                    <span>PCAP</span>
+                </div>
+
+                <a
+                    href="https://unit42.paloaltonetworks.com/wireshark-workshop-videos/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    WATCH WORKSHOPS ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">09</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    WAZUH • TRAINING
+                </span>
+
+                <h4>
+                    Wazuh Training Courses
+                </h4>
+
+                <p>
+                    Official training resources for learning
+                    Wazuh security operations.
+                </p>
+
+                <div class="resource-tags">
+                    <span>WAZUH</span>
+                    <span>SOC</span>
+                </div>
+
+                <a
+                    href="https://wazuh.com/services/training-courses/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    EXPLORE TRAINING ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">10</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    WAZUH • OFFICIAL
+                </span>
+
+                <h4>
+                    Wazuh Official Learning
+                </h4>
+
+                <p>
+                    Start with official Wazuh documentation
+                    and practical learning material.
+                </p>
+
+                <div class="resource-tags">
+                    <span>WAZUH</span>
+                    <span>SIEM</span>
+                </div>
+
+                <a
+                    href="https://documentation.wazuh.com/current/getting-started/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    START LEARNING ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">11</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    CISA • TRAINING
+                </span>
+
+                <h4>
+                    CDM Dashboard Courses
+                </h4>
+
+                <p>
+                    Cybersecurity micro-learning and training
+                    resources from CISA.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CISA</span>
+                    <span>TRAINING</span>
+                </div>
+
+                <a
+                    href="https://www.cisa.gov/resources-tools/training/cdm-dashboard-courses"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    LEARN ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">12</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    CISA • INSIDER THREAT
+                </span>
+
+                <h4>
+                    Insider Threat Resources
+                </h4>
+
+                <p>
+                    Official educational resources and videos
+                    covering insider-threat mitigation.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CISA</span>
+                    <span>DEFENSE</span>
+                </div>
+
+                <a
+                    href="https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/resources-and-tools"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    LEARN ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">13</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    CISA • CYBER HYGIENE
+                </span>
+
+                <h4>
+                    Cyber Hygiene Services
+                </h4>
+
+                <p>
+                    Official resources for strengthening basic
+                    defensive security practices.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CYBER HYGIENE</span>
+                    <span>DEFENSE</span>
+                </div>
+
+                <a
+                    href="https://www.cisa.gov/cyber-hygiene-services"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    WATCH / LEARN ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">14</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    NIST • EVENTS
+                </span>
+
+                <h4>
+                    NIST Events &amp; Presentations
+                </h4>
+
+                <p>
+                    Archive of official cybersecurity events,
+                    presentations and sessions.
+                </p>
+
+                <div class="resource-tags">
+                    <span>NIST</span>
+                    <span>EVENTS</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/cyberframework/events-and-presentation-archive"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    EXPLORE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">15</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    NIST • ONLINE LEARNING
+                </span>
+
+                <h4>
+                    NIST CSF Online Learning
+                </h4>
+
+                <p>
+                    Structured learning material for understanding
+                    cybersecurity frameworks.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CSF</span>
+                    <span>LEARNING</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/cyberframework/csf-11-online-learning"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    LEARN ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">16</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    NIST • CSF RESOURCES
+                </span>
+
+                <h4>
+                    CSF Resource Center
+                </h4>
+
+                <p>
+                    Official collection of NIST CSF resources,
+                    guides and presentations.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CSF</span>
+                    <span>REFERENCE</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/cyberframework"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    EXPLORE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">17</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    WIRESHARK • DOCUMENTATION
+                </span>
+
+                <h4>
+                    Wireshark Tutorials &amp; Guides
+                </h4>
+
+                <p>
+                    Official learning material supporting
+                    network analysis workflows.
+                </p>
+
+                <div class="resource-tags">
+                    <span>NETWORK</span>
+                    <span>ANALYSIS</span>
+                </div>
+
+                <a
+                    href="https://www.wireshark.org/docs/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    LEARN ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">18</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    CISA • RESOURCES
+                </span>
+
+                <h4>
+                    CISA Cybersecurity Resources
+                </h4>
+
+                <p>
+                    Official cybersecurity resources, guidance
+                    and learning material.
+                </p>
+
+                <div class="resource-tags">
+                    <span>CISA</span>
+                    <span>SECURITY</span>
+                </div>
+
+                <a
+                    href="https://www.cisa.gov/resources-tools/resources"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    EXPLORE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">19</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    NIST • PRESENTATIONS
+                </span>
+
+                <h4>
+                    Cybersecurity Presentations
+                </h4>
+
+                <p>
+                    Official presentations and educational material
+                    from NIST.
+                </p>
+
+                <div class="resource-tags">
+                    <span>NIST</span>
+                    <span>RESEARCH</span>
+                </div>
+
+                <a
+                    href="https://www.nist.gov/cyberframework/events-and-presentation-archive"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    EXPLORE ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="resource-card video-card tilt-card">
+
+                <div class="resource-number">20</div>
+
+                <div class="resource-icon">▶</div>
+
+                <span class="resource-type">
+                    SECURITY LEARNING
+                </span>
+
+                <h4>
+                    Cybersecurity Learning Library
+                </h4>
+
+                <p>
+                    A starting point for exploring official
+                    cybersecurity education resources.
+                </p>
+
+                <div class="resource-tags">
+                    <span>LEARNING</span>
+                    <span>SECURITY</span>
+                </div>
+
+                <a
+                    href="https://www.cisa.gov/resources-tools/resources"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    START LEARNING ↗
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <div class="resource-footer">
+
+        <span>
+            ▣ CURATED FOR PRACTICAL SECURITY LEARNING
+        </span>
+
+        <span>
+            LEARN • PRACTICE • BUILD • DOCUMENT • IMPROVE
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     METHOD
+========================================================= -->
+
+<section id="method" class="section investigation reveal">
+
+    <div class="section-head">
+
+        <span>
+            05 / METHOD
+        </span>
+
+        <h2>
+            Learning Philosophy
+        </h2>
+
+    </div>
+
+
+    <div class="philosophy">
+
+        <p>
+
+            “Don't just watch tutorials.
+
+            <strong>
+                Build labs. Break things ethically.
+                Analyze what happened. Fix it. Document it.
+            </strong>”
+
+        </p>
+
+
+        <div class="flow">
+
+
+            <div>
+
+                <span>01</span>
+
+                <b>LEARN</b>
+
+                <small>
+                    Understand the fundamentals
+                </small>
+
+            </div>
+
+
+            <i>→</i>
+
+
+            <div>
+
+                <span>02</span>
+
+                <b>PRACTICE</b>
+
+                <small>
+                    Work in authorized labs
+                </small>
+
+            </div>
+
+
+            <i>→</i>
+
+
+            <div>
+
+                <span>03</span>
+
+                <b>BUILD</b>
+
+                <small>
+                    Create practical projects
+                </small>
+
+            </div>
+
+
+            <i>→</i>
+
+
+            <div>
+
+                <span>04</span>
+
+                <b>DOCUMENT</b>
+
+                <small>
+                    Record evidence and findings
+                </small>
+
+            </div>
+
+
+            <i>→</i>
+
+
+            <div>
+
+                <span>05</span>
+
+                <b>IMPROVE</b>
+
+                <small>
+                    Iterate and deepen skills
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     ROADMAP
+========================================================= -->
+
+<section class="section roadmap reveal">
+
+    <div class="section-head">
+
+        <span>
+            06 / CURRENT FOCUS
+        </span>
+
+        <h2>
+            What I'm Building Toward
+        </h2>
+
+    </div>
+
+
+    <div class="focus-grid">
+
+        <span>🛡️ SOC &amp; Blue Team</span>
+
+        <span>🚨 Threat Detection</span>
+
+        <span>🔎 Digital Forensics</span>
+
+        <span>🌐 Network Security</span>
+
+        <span>🐧 Linux Security</span>
+
+        <span>🐍 Python Security Automation</span>
+
+        <span>☁️ Cloud Security</span>
+
+        <span>🤖 AI + Cybersecurity</span>
+
+        <span>📚 Continuous Learning</span>
+
+    </div>
+<!-- CREATED WEBSITES -->
+<div class="created-websites-wrap">
+
+    <button class="created-websites-btn" onclick="toggleCreatedWebsites()">
+        <span>🌐</span>
+        CREATED WEBSITES
+        <span class="website-arrow" id="websiteArrow">⌄</span>
+    </button>
+
+    <div class="created-websites-panel" id="createdWebsitesPanel">
+
+        <a href="https://deceptionshield.ai.studio/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="created-website-card">
+
+            <div class="website-number">01</div>
+
+            <div class="website-info">
+                <h3>DeceptionShield</h3>
+                <p>Cyber Deception &amp; Security Education Platform</p>
+                <span class="website-link">
+                    https://deceptionshield.ai.studio/
+                </span>
+            </div>
+
+            <div class="website-open">↗</div>
+
+        </a>
+
+
+        <a href="https://sentinel-decoy-system8767.ai.studio/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="created-website-card">
+
+            <div class="website-number">02</div>
+
+            <div class="website-info">
+                <h3>Sentinel Decoy System</h3>
+                <p>Cybersecurity Decoy &amp; Threat Detection Website</p>
+                <span class="website-link">
+                    https://sentinel-decoy-system8767.ai.studio/
+                </span>
+            </div>
+
+            <div class="website-open">↗</div>
+
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ========================================================
+     GITHUB
+========================================================= -->
+
+<section id="github-stats" class="section stats-section reveal">
+
+    <div class="section-head">
+
+        <span>
+            07 / GITHUB
+        </span>
+
+        <h2>
+            GitHub Statistics
+        </h2>
+
+    </div>
+
+
+    <div class="stats-grid">
+
+
+        <div class="stat-card full">
+
+            <img
+                src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=sudheer-infosec&theme=github_dark"
+                alt="GitHub profile details">
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <img
+                src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=sudheer-infosec&theme=github_dark"
+                alt="Most commit language">
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <img
+                src="https://streak-stats.demolab.com?user=sudheer-infosec&theme=github-dark-blue&hide_border=true"
+                alt="GitHub streak">
+
+        </div>
+
+    </div>
+
+
+    <div class="snake">
+
+        <h3>
+            Contribution Snake
+        </h3>
+
+        <img
+            src="https://raw.githubusercontent.com/sudheer-infosec/sudheer-infosec/output/github-contribution-grid-snake-dark.svg"
+            alt="GitHub contribution snake">
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact" class="section contact-section reveal">
+
+    <div class="section-head">
+
+        <span>
+            08 / CONNECT
+        </span>
+
+        <h2>
+            Let's Connect
+        </h2>
+
+    </div>
+
 
     <div class="contact-icons">
 
-        <!-- EMAIL -->
+
         <a
             href="mailto:singurusudheer33@gmail.com"
             class="contact-icon"
             aria-label="Email"
-            title="Email"
-        >
-            <span class="contact-symbol">✉</span>
-            <span class="contact-label">EMAIL</span>
+            title="Email">
+
+            <span class="contact-symbol">
+                ✉
+            </span>
+
+            <span class="contact-label">
+                EMAIL
+            </span>
+
         </a>
 
 
-        <!-- CONTACT -->
         <a
             href="tel:+918142455896"
             class="contact-icon"
             aria-label="Contact"
-            title="Contact"
-        >
-            <span class="contact-symbol">☎</span>
-            <span class="contact-label">CONTACT</span>
+            title="Contact">
+
+            <span class="contact-symbol">
+                ☎
+            </span>
+
+            <span class="contact-label">
+                CONTACT
+            </span>
+
         </a>
+
 
     </div>
 
 </section>
 
+
 </main>
 
+
+<!-- ========================================================
+     FOOTER
+========================================================= -->
+
 <footer>
-<span>© 2026 Singuru Sudheer</span>
-<span>Learning • Building • Securing</span>
-<span>Authorized security research only.</span>
+
+    <span>
+        © 2026 Singuru Sudheer
+    </span>
+
+    <span>
+        Learning • Building • Securing
+    </span>
+
+    <span>
+        Authorized security research only.
+    </span>
+
 </footer>
 
-<script src="script.js"></script>
+
+<!-- ========================================================
+     JAVASCRIPT
+     ALL EFFECTS ARE INCLUDED HERE
+========================================================= -->
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll(".resource-tab");
-  const panels = document.querySelectorAll(".resource-panel");
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", function () {
-      const target = this.dataset.resourceTab;
+/* =========================================================
+   RESOURCE TABS
+========================================================= */
 
-      tabs.forEach(item => item.classList.remove("active"));
-      panels.forEach(panel => panel.classList.remove("active"));
+const tabs =
+    document.querySelectorAll(".resource-tab");
 
-      this.classList.add("active");
-      document.getElementById(target).classList.add("active");
+const panels =
+    document.querySelectorAll(".resource-panel");
+
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        const target =
+            tab.dataset.resourceTab;
+
+        tabs.forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+        panels.forEach(panel => {
+
+            panel.classList.remove("active");
+
+        });
+
+        tab.classList.add("active");
+
+        const targetPanel =
+            document.getElementById(target);
+
+        if(targetPanel){
+
+            targetPanel.classList.add("active");
+
+        }
+
     });
-  });
+
 });
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealItems =
+    document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("active");
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:.12
+        }
+
+    );
+
+
+revealItems.forEach(item => {
+
+    revealObserver.observe(item);
+
+});
+
+
+/* =========================================================
+   3D CARD TILT
+========================================================= */
+
+const tiltCards =
+    document.querySelectorAll(".tilt-card");
+
+
+tiltCards.forEach(card => {
+
+    card.addEventListener(
+        "mousemove",
+        event => {
+
+            if(window.innerWidth <= 950){
+
+                return;
+
+            }
+
+
+            const rect =
+                card.getBoundingClientRect();
+
+
+            const x =
+                event.clientX -
+                rect.left;
+
+
+            const y =
+                event.clientY -
+                rect.top;
+
+
+            const centerX =
+                rect.width / 2;
+
+
+            const centerY =
+                rect.height / 2;
+
+
+            const rotateX =
+                ((y - centerY) /
+                centerY) * -4;
+
+
+            const rotateY =
+                ((x - centerX) /
+                centerX) * 4;
+
+
+            card.style.transform =
+
+                `
+                perspective(1000px)
+                rotateX(${rotateX}deg)
+                rotateY(${rotateY}deg)
+                translateY(-8px)
+                scale(1.015)
+                `;
+
+        }
+
+    );
+
+
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.style.transform = "";
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   MOUSE RGB LIGHT
+========================================================= */
+
+const mouseGlow =
+    document.createElement("div");
+
+
+mouseGlow.style.cssText = `
+
+    position:fixed;
+
+    left:50%;
+    top:50%;
+
+    width:340px;
+    height:340px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:-2;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(82,86,255,.12),
+            rgba(255,43,214,.035) 35%,
+            transparent 70%
+        );
+
+    filter:blur(20px);
+
+    transform:
+        translate(-50%,-50%);
+
+    transition:
+        left .08s linear,
+        top .08s linear;
+
+`;
+
+
+document.body.appendChild(mouseGlow);
+
+
+document.addEventListener(
+    "mousemove",
+    event => {
+
+        mouseGlow.style.left =
+            event.clientX + "px";
+
+        mouseGlow.style.top =
+            event.clientY + "px";
+
+    }
+);
+
+
+/* =========================================================
+   TERMINAL TYPING
+========================================================= */
+
+const typingElement =
+    document.getElementById("typing");
+
+
+const terminalCommands = [
+
+    "whoami",
+
+    "cat security-mission.txt",
+
+    "sudo analyze --threat",
+
+    "python3 detect.py",
+
+    "nmap -sV authorized-lab",
+
+    "vol -f memory.raw windows.pslist",
+
+    "wazuh-alerts --monitor",
+
+    "document --findings"
+
+];
+
+
+let commandIndex = 0;
+
+let characterIndex = 0;
+
+let deleting = false;
+
+
+function terminalType(){
+
+    if(!typingElement){
+
+        return;
+
+    }
+
+
+    const current =
+        terminalCommands[commandIndex];
+
+
+    if(!deleting){
+
+        typingElement.textContent =
+            current.substring(
+                0,
+                characterIndex + 1
+            );
+
+        characterIndex++;
+
+
+        if(characterIndex === current.length){
+
+            deleting = true;
+
+            setTimeout(
+                terminalType,
+                1500
+            );
+
+            return;
+
+        }
+
+    }
+
+    else{
+
+        typingElement.textContent =
+            current.substring(
+                0,
+                characterIndex - 1
+            );
+
+        characterIndex--;
+
+
+        if(characterIndex === 0){
+
+            deleting = false;
+
+            commandIndex =
+                (commandIndex + 1)
+                % terminalCommands.length;
+
+        }
+
+    }
+
+
+    setTimeout(
+        terminalType,
+        deleting ? 45 : 75
+    );
+
+}
+
+
+terminalType();
+
+
+/* =========================================================
+   MATRIX RAIN
+========================================================= */
+
+const canvas =
+    document.getElementById("matrix");
+
+
+const ctx =
+    canvas.getContext("2d");
+
+
+let matrixWidth =
+    window.innerWidth;
+
+
+let matrixHeight =
+    window.innerHeight;
+
+
+let fontSize = 13;
+
+
+let columns =
+    Math.floor(
+        matrixWidth /
+        fontSize
+    );
+
+
+let drops =
+    Array(columns).fill(1);
+
+
+const matrixCharacters =
+    "01ABCDEFGHIJKLMNOPQRSTUVWXYZ<>/{}[]$#@";
+
+
+function resizeMatrix(){
+
+    matrixWidth =
+        canvas.width =
+        window.innerWidth;
+
+    matrixHeight =
+        canvas.height =
+        window.innerHeight;
+
+    columns =
+        Math.floor(
+            matrixWidth /
+            fontSize
+        );
+
+    drops =
+        Array(columns).fill(1);
+
+}
+
+
+resizeMatrix();
+
+
+function drawMatrix(){
+
+    ctx.fillStyle =
+        "rgba(3,5,12,.09)";
+
+    ctx.fillRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    ctx.font =
+        fontSize +
+        "px monospace";
+
+
+    ctx.fillStyle =
+        "#6277ff";
+
+
+    for(
+        let i = 0;
+        i < drops.length;
+        i++
+    ){
+
+        const char =
+            matrixCharacters[
+                Math.floor(
+                    Math.random() *
+                    matrixCharacters.length
+                )
+            ];
+
+
+        ctx.fillText(
+            char,
+            i * fontSize,
+            drops[i] * fontSize
+        );
+
+
+        if(
+            drops[i] * fontSize >
+            canvas.height &&
+            Math.random() > .975
+        ){
+
+            drops[i] = 0;
+
+        }
+
+
+        drops[i]++;
+
+    }
+
+}
+
+
+setInterval(
+    drawMatrix,
+    55
+);
+
+
+window.addEventListener(
+    "resize",
+    resizeMatrix
+);
+
+
+/* =========================================================
+   SMOOTH ACTIVE NAVIGATION
+========================================================= */
+
+const navLinks =
+    document.querySelectorAll(
+        "header.nav nav a"
+    );
+
+
+const sections =
+    document.querySelectorAll(
+        "main section[id]"
+    );
+
+
+const sectionObserver =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    navLinks.forEach(link => {
+
+                        link.classList.remove(
+                            "active-nav"
+                        );
+
+                    });
+
+
+                    const active =
+                        document.querySelector(
+                            `header.nav nav a[href="#${entry.target.id}"]`
+                        );
+
+
+                    if(active){
+
+                        active.classList.add(
+                            "active-nav"
+                        );
+
+                    }
+
+                }
+
+            });
+
+        },
+
+        {
+            rootMargin:
+                "-35% 0px -55% 0px"
+        }
+
+    );
+
+
+sections.forEach(section => {
+
+    sectionObserver.observe(section);
+
+});
+
+
+/* =========================================================
+   PREVENT TILT ON TOUCH DEVICES
+========================================================= */
+
+if(
+    "ontouchstart" in window
+){
+
+    document.body.classList.add(
+        "touch-device"
+    );
+
+}
+
 </script>
 
+
 </body>
+
 </html>
