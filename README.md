@@ -1,4 +1,4 @@
-﻿# Singuru Sudheer â€” Cybersecurity Portfolio
+﻿# Singuru Sudheer Cybersecurity Portfolio
 
 A responsive dark cybersecurity portfolio for Singuru Sudheer, featuring SOC, DFIR, threat detection, cyber intelligence, security automation and practical project work.
 
@@ -19,6 +19,6 @@ A responsive dark cybersecurity portfolio for Singuru Sudheer, featuring SOC, DF
 - Portfolio: https://sudheer-infosec.github.io/
 
 ## Deploy on GitHub Pages
-Copy index.html, style.css, script.js, and profile.jpg into the repository root, then deploy the main branch from **Settings â†’ Pages**.
+Copy index.html, style.css, script.js, and profile.jpg into the repository root, then deploy the main branch from **Settings Pages**.
 
 The project uses only HTML, CSS and JavaScript plus external image endpoints for GitHub/typing statistics.
