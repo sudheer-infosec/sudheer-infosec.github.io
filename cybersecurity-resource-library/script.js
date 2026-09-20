@@ -1,4 +1,4 @@
-﻿const PDF_BASE = "../CYBERSECURITY-RESOURCE-LIBRARY/";
+const PDF_BASE = "./";
 
 const library = document.getElementById("library");
 const searchInput = document.getElementById("searchInput");
